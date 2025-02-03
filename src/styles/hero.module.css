@@ -1,0 +1,11 @@
+.hero-container {
+    @apply bg-primary;
+}
+
+.heading1 {
+    @apply text-secondary font-bold text-center font-built-titling;
+    font-size: 160px; /* Regular CSS property */
+}
+.hero-image{
+    align-content: center;
+}

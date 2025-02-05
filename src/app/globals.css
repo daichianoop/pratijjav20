@@ -2,10 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+.alegreya-unique {
+    font-family: "Alegreya", serif;
+    font-weight: 400; /* You can change this to 700 for bold */
+    font-style: normal;
+}
+
 @font-face {
-    font-family: "built-titling";
-    src: url("/src/fonts/built\ titling\ bd.otf") format("opentype");
-    font-weight: 500;
-    font-style: bold;
-  }
-  
+    font-family: 'BuiltTilting';
+    src: url('/src/app/components/fonts/bt.otf');
+    font-weight: bold; 
+    font-style: normal; 
+}
+
+/* Additional styles using BuiltTilting */
+.built-tilting {
+    font-family: 'BuiltTilting', monospace;
+}

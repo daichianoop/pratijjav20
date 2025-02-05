@@ -1,11 +1,14 @@
-import React from 'react'
-import Hero from '@/components/hero'
+import {AnimatedTestimonialsDemo} from "@/app/components/animated-testimonials-demo";
+import FlipCard from "@/app/components/FlipCards";
+import AboutPageFlipCards from "@/app/components/AboutPageFlipCards";
 
-const Home = () => {
+
+export default function Home() {
   return (
-    <div><Hero/></div>
-    
-  )
+    <>
+      <AnimatedTestimonialsDemo/>
+      <FlipCard/>
+      <AboutPageFlipCards/>
+    </>
+  );
 }
-
-export default Home

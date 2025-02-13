@@ -1,6 +1,6 @@
 /** @format */
 
-import mongoose, { Schema, Document, model } from "mongoose";
+import { Schema, Document, model } from "mongoose";
 
 // Define an interface for the second form data
 interface Form2 extends Document {

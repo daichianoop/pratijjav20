@@ -21,7 +21,7 @@ export async function POST(req: Request) {
         // Save the contact
         await newContact.save();
 
-        return NextResponse.json({ message: 'Contact saved successfully' }, { status: 201 });
+        return NextResponse.json({ message: 'Issue raised successfully' }, { status: 201 });
     } catch (error) {
         console.error('Error saving contact:', error);
         return NextResponse.json({ message: 'Error saving contact', error }, { status: 500 });

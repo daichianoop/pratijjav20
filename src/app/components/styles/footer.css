@@ -1,0 +1,130 @@
+/* Footer Styles */
+.footer {
+    background-color: #EBCE89; /* Updated from black to #EBCE89 */
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Full-Width Google Maps */
+.full-width-map iframe {
+    width: 90%; /* Matches the horizontal line width */
+    max-width: 100%; /* Ensures responsiveness */
+    height: 200px; /* Adjust if needed */
+    border: none;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto; /* Centers the map */
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer-bottom {
+    position: relative;
+    background-color: #EBCE89; /* Matching 'Contact Us' section */
+    padding: 10px 0;
+}
+
+.footer-bottom hr {
+    width: 90%; /* Shorter than full width */
+    border: none;
+    border-top: 2px solid #000; /* Black horizontal line */
+    margin: 10px auto; /* Centers the line */
+}
+
+.footer-bottom p {
+    position: absolute;
+    left: 5%;
+    bottom: -2px; /* Moves text 2px below the line */
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #000; /* Black text for contrast */
+}
+
+
+/* Footer Sections */
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+/* Phone Numbers & Address */
+.footer-section p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Social Media Links */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-icon {
+    font-size: 1.5rem; /* Increase icon size if needed */
+    color: #fff;
+}
+.contact-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Quick Links */
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .contact-item {
+        justify-content: center;
+    }
+}

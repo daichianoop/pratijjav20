@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.overflow-scroll::-webkit-scrollbar {
+    display: none;
+}
+
 .alegreya-unique {
     font-family: "Alegreya", serif;
     font-weight: 400; /* You can change this to 700 for bold */

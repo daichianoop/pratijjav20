@@ -21,12 +21,14 @@ const AdjForm: React.FC = () => {
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
-        const { name, type, checked, value } = e.target;
+        const { name, type } = e.target;
+        const value = type === "checkbox"
+            ? (e.target as HTMLInputElement).checked
+            : e.target.value;
+
         setFormData((prev) => ({
             ...prev,
-            [name]: type === "checkbox" ? checked : value,
+            [name]: value,
         }));
     };
 
@@ -34,6 +36,7 @@ const AdjForm: React.FC = () => {
         e.preventDefault();
         console.log("Form Submitted:", formData);
     };
+
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-green-900 text-white p-6">
             <h1 className="text-5xl font-bold text-yellow-400 mb-4">INDEPENDENT ADJUDICATOR APPLICATION</h1>
@@ -45,7 +48,7 @@ const AdjForm: React.FC = () => {
                         key={field}
                         type={field === "email" ? "email" : "text"}
                         name={field}
-                        value={formData[field as keyof FormData]}
+                        value={String(formData[field as keyof FormData])} 
                         onChange={handleChange}
                         placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
                         required

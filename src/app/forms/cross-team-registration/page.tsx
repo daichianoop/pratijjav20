@@ -28,9 +28,8 @@ const RegistrationForm: React.FC = () => {
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, index?: number) => {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
-        const { name, value, type, checked } = e.target;
+        const { name, type, value } = e.target;
+        const checked = (e.target as HTMLInputElement).checked;
 
         if (index !== undefined) {
             setFormData((prev) => {
@@ -39,7 +38,10 @@ const RegistrationForm: React.FC = () => {
                 return { ...prev, speakers: updatedSpeakers };
             });
         } else {
-            setFormData((prev) => ({ ...prev, [name]: type === "checkbox" ? checked : value }));
+            setFormData((prev) => ({
+                ...prev,
+                [name]: type === "checkbox" ? checked : value,
+            }));
         }
     };
 
@@ -73,9 +75,9 @@ const RegistrationForm: React.FC = () => {
                             {Object.keys(speaker).map((field) => (
                                 <input
                                     key={field}
-                                    type="text"
+                                    type={field === "email" ? "email" : "text"}
                                     name={field}
-                                    value={speaker[field as keyof Speaker]}
+                                    value={String(speaker[field as keyof Speaker])} // ✅ Ensures correct type
                                     onChange={(e) => handleChange(e, index)}
                                     placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
                                     required

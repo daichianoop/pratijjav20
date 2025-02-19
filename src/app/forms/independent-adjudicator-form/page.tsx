@@ -48,7 +48,7 @@ const AdjForm: React.FC = () => {
                         key={field}
                         type={field === "email" ? "email" : "text"}
                         name={field}
-                        value={String(formData[field as keyof FormData])} 
+                        value={String(formData[field as keyof FormData])}
                         onChange={handleChange}
                         placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
                         required

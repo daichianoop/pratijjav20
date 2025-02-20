@@ -13,6 +13,11 @@
     font-style: normal;
 }
 
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 @font-face {
     font-family: 'BuiltTilting';
     src: url('/src/app/components/fonts/bt.otf');

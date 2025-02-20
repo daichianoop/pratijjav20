@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import "../form-styles/cross-team.css";
 
 interface Speaker {
     name: string;
@@ -51,12 +52,12 @@ const RegistrationForm: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-col items-center min-h-screen bg-[#0E131F] text-white p-6">
-            <h1 className="text-5xl font-bold text-[#f9e053] text-center mb-6">CROSS TEAM REGISTRATION</h1>
+        <div className="container">
+            <h1>CROSS TEAM REGISTRATION</h1>
 
-            <form onSubmit={handleSubmit} className="bg-[#1B2029] p-6 rounded-lg shadow-lg w-full max-w-2xl">
+            <form onSubmit={handleSubmit} className="form-container">
                 {/* Team Name */}
-                <label className="text-2xl font-semibold text-yellow-400">TEAM NAME</label>
+                <label className="subheading">TEAM NAME</label>
                 <input
                     type="text"
                     name="teamName"
@@ -64,14 +65,13 @@ const RegistrationForm: React.FC = () => {
                     onChange={handleChange}
                     placeholder="Team Name"
                     required
-                    className="w-full p-3 rounded-lg bg-yellow-300 text-black placeholder-black mb-4"
                 />
 
                 {/* Speakers Section */}
-                <div className="mt-4">
+                <div className="speakers-container">
                     {formData.speakers.map((speaker, index) => (
-                        <div key={index} className="mb-6 p-4 bg-[#1B2029] rounded-lg">
-                            <h3 className="text-2xl text-yellow-400 font-semibold mb-2">SPEAKER - {index + 1}</h3>
+                        <div key={index} className="speaker">
+                            <h3 className="subheading">SPEAKER - {index + 1}</h3>
                             {Object.keys(speaker).map((field) => (
                                 <input
                                     key={field}
@@ -81,7 +81,6 @@ const RegistrationForm: React.FC = () => {
                                     onChange={(e) => handleChange(e, index)}
                                     placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
                                     required
-                                    className="w-full p-3 rounded-lg bg-yellow-300 text-black placeholder-black mb-2"
                                 />
                             ))}
                         </div>
@@ -89,31 +88,33 @@ const RegistrationForm: React.FC = () => {
                 </div>
 
                 {/* Accommodation */}
-                <div className="flex items-center gap-2 text-yellow-400 mt-4">
-                    <input
-                        type="checkbox"
-                        name="accommodation"
-                        checked={formData.accommodation}
-                        onChange={handleChange}
-                        className="w-5 h-5 border border-yellow-400 checked:bg-yellow-400 cursor-pointer"
-                    />
-                    <label className="text-xl">Need Accommodation?</label>
+                <div className="checkbox-container">
+                    <label className="subheading">ACCOMMODATION</label>
+                    <div>
+                        <span>Need Accommodation?</span>
+                        <input
+                            type="checkbox"
+                            name="accommodation"
+                            checked={formData.accommodation}
+                            onChange={handleChange}
+                            className={`mt-2 ${formData.accommodation ? "checked" : ""}`}
+                        />
+                    </div>
                 </div>
 
                 {/* Message */}
-                <label className="text-2xl text-yellow-400 font-semibold mt-6 block">MESSAGE</label>
+                <label className="subheading">MESSAGE</label>
                 <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Anything else you would like us to know?"
-                    className="w-full p-3 rounded-lg bg-yellow-300 text-black placeholder-black mt-2 h-20 resize-none"
                 />
 
                 {/* Submit Button */}
                 <button
                     type="submit"
-                    className="block w-40 mx-auto mt-6 bg-yellow-400 text-black font-bold py-3 rounded-lg transition hover:bg-yellow-500"
+                    className="submit-button"
                 >
                     SUBMIT
                 </button>

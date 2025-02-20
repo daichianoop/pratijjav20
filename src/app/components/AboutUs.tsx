@@ -27,7 +27,7 @@ const AboutUs = () => {
 							style={{ fontFamily: "Impact, sans-serif" }}>
 							ABOUT US
 						</h1>
-						<p className=" text-base sm:text-lg max-w-3xl mt-4 mx-auto text-teal-950">
+						<p className="text-base sm:text-lg max-w-3xl mt-4 mx-auto text-teal-950">
 							KRONICLE, KIIT&apos;s official debating society, brings its
 							mission to reality once again, with its own APD competition—a
 							monument to our founder&apos;s intellect, argumentation, and
@@ -51,7 +51,7 @@ const AboutUs = () => {
 							<Image
 								src="https://ik.imagekit.io/chaitanya/IMG_3085.png?updatedAt=1740067768461"
 								alt="Debate"
-								className="rounded-lg p-2 "
+								className="rounded-lg p-2"
 								width={400}
 								height={300}
 							/>
@@ -149,7 +149,7 @@ const AboutUs = () => {
 								auditoriums – the largest one with 5000 seating capacity, 18
 								sports complexes, many international standard stadiums covering
 								all sports, 30 food courts, and a rose garden. The institution
-								takes pride in being the greenest campus in India.  It has
+								takes pride in being the greenest campus in India. It has
 								received all accreditations and affiliations from prestigious
 								national and international bodies such as the Accreditation
 								Board for Engineering and Technology (ABET), USA and the
@@ -158,8 +158,8 @@ const AboutUs = () => {
 								citations. KIIT has had an excellent placement record since its
 								inception owing to its quality teaching and learning process,
 								and the brand value that it carries. KIIT is ranked in the
-								cohort of 601-800 in the Times Higher Education ‘World
-								University Ranking 2024’. Its Computer Science Engineering ranks
+								cohort of 601-800 in the Times Higher Education &apos;World
+								University Ranking 2024&apos;. Its Computer Science Engineering ranks
 								in the cohort of 301-400 and its overall Engineering ranking is
 								401-500 in the world. KIIT has been accredited with an A++ grade
 								by the National Assessment and Accreditation Council (NAAC) with
@@ -201,15 +201,15 @@ const AboutUs = () => {
 								achieving, thereby, making these children ready to face the
 								world. The institution acts as a medium of uplifting the
 								sidelined sections of Odisha through education. With individuals
-								stepping  into public sectors, the alumni network of the
-								institution grows stronger day by day . This alumni connection
+								stepping&nbsp; into public sectors, the alumni network of the
+								institution grows stronger day by day. This alumni connection
 								actively helps KISS to expand their reach and touch more lives
 								through education. With continued efforts, KISS remains a
 								testament to the success of institutional support in breaking
 								intergenerational cycles of poverty and preserving cultural
-								heritage. The institute, following its vision-"A world where all
+								heritage. The institute, following its vision-&quot;A world where all
 								children and youth can learn free of cost to learn, lead and
-								grow without fear to reach their full potential"-remains
+								grow without fear to reach their full potential&quot;-remains
 								testimony to the possibility of comprehensive educational
 								initiatives in achieving sustainable social development among
 								tribal communities.
@@ -304,8 +304,8 @@ const AboutUs = () => {
 								him many national and international awards and honors.
 							</p>
 							<p className="gradient-text">
-								Motivated by his mission—&quot;zero poverty, zero hunger, and
-								zero illiteracy&quot;—he has been selfless in his contributions
+								Motivated by his mission-&quot;zero poverty, zero hunger, and
+								zero illiteracy&quot;-he has been selfless in his contributions
 								for the upliftment of the rural and indigenous groups of the
 								society.
 							</p>

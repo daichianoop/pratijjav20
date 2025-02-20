@@ -3,12 +3,7 @@
 import React from "react";
 import "./styles/flipCards.css";
 import Image from "next/image";
-import { Yeseva_One } from "next/font/google";
 
-const yeseva = Yeseva_One({
-	weight: ["400"],
-	subsets: ["latin"],
-});
 
 const FlipCard: React.FC = () => {
 	return (

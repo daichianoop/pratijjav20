@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0E131F;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.container {
+    background: #1B2029;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #f9e053;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #F4D03F;
+    color: black;
+    width: 70%;
+    margin: 0 auto 10px;
+}
+
+input::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 1;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+textarea::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 1;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.speakers-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.speaker {
+    width: 30%;
+    background: #1B2029;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.checkbox-container label {
+    margin-bottom: 5px;
+}
+
+.checkbox-container div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin : 0 auto;
+    color: #f9e053;
+    white-space: nowrap;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #d1a400;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button {
+    background: radial-gradient(circle, #F4D03F 30%, #5a522a 100%);
+    color: black;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+    width: 140px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.submit-button:hover {
+    background: radial-gradient(circle, #ffd904 30%, #7f743c 100%);
+}
+
+.subheading {
+    font-size:2rem;
+    background: radial-gradient(circle, #F4D03F 30%, #7f743c 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding: 5px;
+    margin: 0 auto;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}

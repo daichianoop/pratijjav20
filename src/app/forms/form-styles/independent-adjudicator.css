@@ -1,0 +1,166 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #002027;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 10px;
+}
+
+.container {
+    padding: 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #EBCE89;
+    margin-bottom: 10px;
+}
+
+.subheading,
+input,
+textarea,
+p,
+label,
+.submit-button {
+    font-family: 'Poppins', sans-serif;
+}
+
+.subheading {
+    font-size: 22px;
+    background: radial-gradient(circle, #EBCE89 30%, #7f743c 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+input, textarea {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #EBCE89;
+    color: black;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+input:hover, textarea:hover {
+    background-color: #EBCE89;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #f9e053;
+    background-color: #fff69b;
+}
+
+
+input::placeholder, textarea::placeholder {
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+.submit-button {
+    background: radial-gradient(circle, #EBCE89 30%, #2E1413 100%);
+    color: #2E1413;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    width: 160px;
+    margin-top: 15px;
+}
+
+.submit-button:hover {
+    background: radial-gradient(circle, #ffd904 30%, #7f743c 100%);
+    transform: scale(1.05);
+}
+.accommodation-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+
+}
+.checkbox-container label {
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+
+}
+
+.checkbox-container input {
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+
+.accommodation-container label {
+    cursor: pointer;
+}
+
+.tick-container {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .subheading {
+        font-size: 18px;
+    }
+
+    input, textarea {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .submit-button {
+        font-size: 14px;
+        width: 140px;
+    }
+}

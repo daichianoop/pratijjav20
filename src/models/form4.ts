@@ -1,6 +1,6 @@
 /** @format */
 
-import { Schema, Document, model } from "mongoose";
+import mongoose, { Schema, Document, model } from "mongoose";
 
 // Define an interface for IA / SA application
 interface Form4 extends Document {

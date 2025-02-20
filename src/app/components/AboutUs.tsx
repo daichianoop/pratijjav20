@@ -304,8 +304,8 @@ const AboutUs = () => {
 								him many national and international awards and honors.
 							</p>
 							<p className="gradient-text">
-								Motivated by his mission—&apos;zero poverty, zero hunger, and
-								zero illiteracy&apos;—he has been selfless in his contributions
+								Motivated by his mission—&quot;zero poverty, zero hunger, and
+								zero illiteracy&quot;—he has been selfless in his contributions
 								for the upliftment of the rural and indigenous groups of the
 								society.
 							</p>

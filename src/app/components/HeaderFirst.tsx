@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import "./styles/headerFirstPage.css";
-import Navbar from "./Navbar";
 
 const HeaderFirstPage: React.FC = () => {
 	return (

@@ -265,7 +265,7 @@ const AboutUs = () => {
 				{/* Founder Section */}
 				<section className="container mx-auto px-4 py-16">
 					<h2
-						className="text-[80px] text-center w-1/2 mx-auto font-bold text-amber-100 mb-8"
+						className="text-[50px] text-center w-1/2 mx-auto font-bold text-amber-100 mb-8"
 						style={{ fontFamily: "Impact, sans-serif" }}>
 						ABOUT FOUNDER OF KIIT AND KISS
 					</h2>

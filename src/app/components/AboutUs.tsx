@@ -111,7 +111,7 @@ const AboutUs = () => {
 								/>
 								<h3 className="text-amber-100 text-3xl font-bold">KIIT</h3>
 							</div>
-							<p className="text-gray-300 mb-8 leading-relaxed text-[20px]">
+							<p className="text-gray-300 mb-8 leading-relaxed text-[18px]">
 								Kalinga Institute of Industrial Technology (KIIT) Deemed to be
 								University has emerged as a leading institute for professional
 								studies. It is admired all over for the quality of its academic

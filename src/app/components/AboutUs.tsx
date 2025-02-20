@@ -1,7 +1,6 @@
 /** @format */
 
 import React from "react";
-import FlipCard from "./AboutPageFlipCards";
 import { Barlow } from "next/font/google";
 
 const barlow = Barlow({

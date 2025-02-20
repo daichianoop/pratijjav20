@@ -1,6 +1,6 @@
 /** @format */
 
-import mongoose, { Schema, Document, model } from "mongoose";
+import{ Schema, Document, model } from "mongoose";
 
 // Define an interface for the cross-team form data
 interface Form1 extends Document {

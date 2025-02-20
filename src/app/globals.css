@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.gradient-text {
+  @apply bg-gradient-to-r from-[#7F654A] via-[#EBCE89] to-[#7F654A] bg-clip-text text-transparent;
+}
 
 .overflow-scroll::-webkit-scrollbar {
     display: none;

@@ -101,17 +101,16 @@ const AboutUs = () => {
 				</section>
 
 				<div className="relative">
-  <div className="w-full h-32 mt-40 bg-[url('/Component9.png')] bg-center bg-cover bg-no-repeat z-0"></div>
-  <p className="absolute inset-0 flex items-center justify-center text-8xl font-[barlow_light] text-[#7F654A] z-10">
-    ABOUT
-  </p>
-</div>
-
+					<div className="w-full h-32 mt-40 bg-[url('/Component9.png')] bg-center bg-cover bg-no-repeat z-0"></div>
+					<p
+						className="absolute inset-0 flex items-center justify-center text-8xl text-[#7F654A] z-10"
+						style={{ fontFamily: barlow_light.style.fontFamily }}>
+						ABOUT
+					</p>
+				</div>
 
 				{/* KIIT & KISS Section */}
 				<section className="container mx-auto px-4 py-16">
-					
-
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-16">
 						{/* KIIT Section */}
 						<div>

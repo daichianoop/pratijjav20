@@ -52,7 +52,7 @@ const RegistrationForm: React.FC = () => {
     };
 
     return (
-        <div className="container">
+        <div className="container ">
             <h1>CROSS TEAM REGISTRATION</h1>
 
             <form onSubmit={handleSubmit} className="form-container">

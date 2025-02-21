@@ -9,7 +9,10 @@ const barlow = Barlow({
 	weight: "900", // specify desired weight
 	subsets: ["latin"],
 });
-
+const barlow_light = Barlow({
+	weight: "500", // specify desired weight
+	subsets: ["latin"],
+});
 const AboutUs = () => {
 	return (
 		<div className="min-h-screen bg-[#002027]">
@@ -97,8 +100,18 @@ const AboutUs = () => {
 					</div>
 				</section>
 
+				<div className="relative">
+  <div className="w-full h-32 mt-40 bg-[url('/Component9.png')] bg-center bg-cover bg-no-repeat z-0"></div>
+  <p className="absolute inset-0 flex items-center justify-center text-8xl font-[barlow] text-[#7F654A] z-10">
+    ABOUT
+  </p>
+</div>
+
+
 				{/* KIIT & KISS Section */}
 				<section className="container mx-auto px-4 py-16">
+					
+
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-16">
 						{/* KIIT Section */}
 						<div>
@@ -159,16 +172,17 @@ const AboutUs = () => {
 								inception owing to its quality teaching and learning process,
 								and the brand value that it carries. KIIT is ranked in the
 								cohort of 601-800 in the Times Higher Education &apos;World
-								University Ranking 2024&apos;. Its Computer Science Engineering ranks
-								in the cohort of 301-400 and its overall Engineering ranking is
-								401-500 in the world. KIIT has been accredited with an A++ grade
-								by the National Assessment and Accreditation Council (NAAC) with
-								an all-India 15th rank by the National Institution of Ranking
-								Framework, NIRF, Ministry of Education. It has also been the top
-								university for innovation among private institutions for two
-								consecutive years (2020, 2021) according to AICTE, Government of
-								India. It has been ranked 168 among universities in the world as
-								per the Times Higher Education Young University Ranking 2024.
+								University Ranking 2024&apos;. Its Computer Science Engineering
+								ranks in the cohort of 301-400 and its overall Engineering
+								ranking is 401-500 in the world. KIIT has been accredited with
+								an A++ grade by the National Assessment and Accreditation
+								Council (NAAC) with an all-India 15th rank by the National
+								Institution of Ranking Framework, NIRF, Ministry of Education.
+								It has also been the top university for innovation among private
+								institutions for two consecutive years (2020, 2021) according to
+								AICTE, Government of India. It has been ranked 168 among
+								universities in the world as per the Times Higher Education
+								Young University Ranking 2024.
 							</p>
 						</div>
 
@@ -207,12 +221,12 @@ const AboutUs = () => {
 								through education. With continued efforts, KISS remains a
 								testament to the success of institutional support in breaking
 								intergenerational cycles of poverty and preserving cultural
-								heritage. The institute, following its vision-&quot;A world where all
-								children and youth can learn free of cost to learn, lead and
-								grow without fear to reach their full potential&quot;-remains
-								testimony to the possibility of comprehensive educational
-								initiatives in achieving sustainable social development among
-								tribal communities.
+								heritage. The institute, following its vision-&quot;A world
+								where all children and youth can learn free of cost to learn,
+								lead and grow without fear to reach their full
+								potential&quot;-remains testimony to the possibility of
+								comprehensive educational initiatives in achieving sustainable
+								social development among tribal communities.
 							</p>
 
 							<div className="flex flex-col gap-8">

@@ -102,7 +102,7 @@ const AboutUs = () => {
 
 				<div className="relative">
   <div className="w-full h-32 mt-40 bg-[url('/Component9.png')] bg-center bg-cover bg-no-repeat z-0"></div>
-  <p className="absolute inset-0 flex items-center justify-center text-8xl font-[barlow] text-[#7F654A] z-10">
+  <p className="absolute inset-0 flex items-center justify-center text-8xl font-[barlow_light] text-[#7F654A] z-10">
     ABOUT
   </p>
 </div>

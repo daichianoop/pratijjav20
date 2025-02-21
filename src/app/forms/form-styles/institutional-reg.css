@@ -1,19 +1,19 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #0E131F;
     color: white;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+.body-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 }
-
 .container {
-    background: #1B2029;
-    margin: 0 10vw;
+    background-image: url("/formbg.png");
+    background-position: center;
+    background-size: cover;
     padding: 20px 40px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
     text-align: center;
 }
 
@@ -21,19 +21,7 @@ h1 {
     margin-bottom: 20px;
     font-size: 50px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #f9e053;
-}
-
-.subheading {
-    font-size:x-large;
-    background: radial-gradient(circle, #F4D03F 30%, #7f743c 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-    padding: 5px;
-    margin: 0 auto;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    color: #EBCE89;
 }
 
 .flex-container {
@@ -56,7 +44,6 @@ h1 {
 
 .contact-box {
     width: 48%;
-    background: #1B2029;
     padding: 15px;
     border-radius: 5px;
     margin: 0 auto;
@@ -68,7 +55,7 @@ input, textarea {
     margin: 10px 0;
     border: none;
     border-radius: 15px;
-    background-color: #F4D03F;
+    background-color: #EBCE89;
     color: black;
 }
 
@@ -91,7 +78,7 @@ textarea {
 }
 
 .slots-container {
-    background: radial-gradient(circle, #F4D03F 30%, #5a522a 100%);
+    background: radial-gradient(circle,  #7F654A 0%, #EBCE89 50%,#7F654A 100%);
     width:70%;
     height: 40px;
     display: flex;
@@ -106,8 +93,7 @@ textarea {
 .checkbox-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin: 10px 0;
 }
 
@@ -117,27 +103,25 @@ textarea {
 
 .checkbox-container div {
     display: flex;
-    align-items: start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
     margin : 0 auto;
-    color: #f9e053;
+    color: #EBCE89;
     white-space: nowrap;
 }
 
 .checkbox-container input[type="checkbox"] {
     width: 15px;
     height: 15px;
-    padding: 0;
-    margin: 5px 0 0;
-    border: none;
-    border-radius: 0;
-    background-color: white;
-    color: black;
+    border: 1px solid #7F654A;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-
 .submit-button {
-    background: radial-gradient(circle, #F4D03F 30%, #5a522a 100%);
+    background: radial-gradient(circle,  #7F654A 0%, #EBCE89 50%,#7F654A 100%);
     color: black;
     font-weight: bold;
     padding: 8px 15px;
@@ -147,10 +131,20 @@ textarea {
     transition: 0.3s;
     font-size: 14px;
     width: 140px;
-    margin: 0 auto;
+    margin: 10px;
     text-align: center;
 }
 
 .submit-button:hover {
-    background: radial-gradient(circle, #ffd904 30%, #7f743c 100%);
+    background: radial-gradient(circle, #7F654A 0%, #EBCE89 50%,#7F654A 100%);
+}
+
+.subheading {
+    font-size:2rem;
+    background: radial-gradient(circle, #7F654A 0%, #EBCE89 50%,#7F654A 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }

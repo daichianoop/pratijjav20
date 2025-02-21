@@ -38,9 +38,10 @@ const AdjForm: React.FC = () => {
     };
 
     return (
+        <div className={"body-container"}>
         <div className="container">
             <h1>INDEPENDENT ADJUDICATOR APPLICATION</h1>
-            <h2>Independent Adjudicator</h2>
+            <h2 className={"uppercase subheading"}>Independent Adjudicator</h2>
 
             <form onSubmit={handleSubmit} className="form-container">
                 {["name", "email", "contact", "institution"].map((field) => (
@@ -52,11 +53,10 @@ const AdjForm: React.FC = () => {
                         onChange={handleChange}
                         placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
                         required
-                        className="w-full p-3 mb-4 rounded-lg bg-yellow-300 text-black placeholder-black placeholder-opacity-50 focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                    />
+                                            />
                 ))}
 
-                <h2 >Accommodation</h2>
+                <h2  className={"uppercase subheading"}>Accommodation</h2>
                 <div className="checkbox-container">
                     <input
                         type="checkbox"
@@ -67,7 +67,7 @@ const AdjForm: React.FC = () => {
                     <label>Need Accommodation?</label>
                 </div>
 
-                <h2 className="subheading">Message</h2>
+                <h2 className="subheading uppercase">Message</h2>
                 <textarea
                     name="message"
                     value={formData.message}
@@ -79,6 +79,7 @@ const AdjForm: React.FC = () => {
                     SUBMIT
                 </button>
             </form>
+        </div>
         </div>
     );
 };

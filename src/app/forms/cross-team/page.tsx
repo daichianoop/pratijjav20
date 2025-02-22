@@ -14,13 +14,13 @@ interface Speaker {
 interface FormData {
 	teamName: string;
 	speakers: Speaker[];
-	// Note: Even though our interface uses "accommodation", we'll map it to "accomodation" in the payload
+	// Note: Even though our interface uses "accommodation", we'll map it to "accomodation" in the payload if needed.
 	accommodation: boolean;
 	message: string;
 }
 
 const RegistrationForm: React.FC = () => {
-	const [formData, setFormData] = useState<FormData>({
+	const initialFormData: FormData = {
 		teamName: "",
 		speakers: [
 			{ name: "", email: "", contact: "", institution: "" },
@@ -29,8 +29,9 @@ const RegistrationForm: React.FC = () => {
 		],
 		accommodation: false,
 		message: "",
-	});
+	};
 
+	const [formData, setFormData] = useState<FormData>(initialFormData);
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [responseMessage, setResponseMessage] = useState("");
 
@@ -81,7 +82,7 @@ const RegistrationForm: React.FC = () => {
 					email_3: formData.speakers[2].email,
 					contact_3: formData.speakers[2].contact,
 					institution_3: formData.speakers[2].institution,
-					// Map the client's "accommodation" field to the model's "accomodation"
+					// Map the client's "accommodation" field to the model's key (if needed, update here)
 					accommodation: formData.accommodation,
 					message: formData.message,
 				}),
@@ -91,6 +92,8 @@ const RegistrationForm: React.FC = () => {
 				const data = await res.json();
 				setResponseMessage("Form submitted successfully!");
 				console.log("Response:", data);
+				// Clear the form after successful submission
+				setFormData(initialFormData);
 			} else {
 				setResponseMessage("There was an error submitting the form.");
 				console.error("Submission error", res);
@@ -109,9 +112,12 @@ const RegistrationForm: React.FC = () => {
 
 			<form onSubmit={handleSubmit} className="form-container">
 				{/* Team Name */}
-				<label className="subheading">TEAM NAME</label>
+				<label className="subheading" htmlFor="teamName">
+					TEAM NAME
+				</label>
 				<input
 					type="text"
+					id="teamName"
 					name="teamName"
 					value={formData.teamName}
 					onChange={handleChange}
@@ -141,11 +147,14 @@ const RegistrationForm: React.FC = () => {
 
 				{/* Accommodation */}
 				<div className="checkbox-container">
-					<label className="subheading">ACCOMMODATION</label>
+					<label className="subheading" htmlFor="accommodation">
+						ACCOMMODATION
+					</label>
 					<div>
 						<span>Need Accommodation?</span>
 						<input
 							type="checkbox"
+							id="accommodation"
 							name="accommodation"
 							checked={formData.accommodation}
 							onChange={handleChange}
@@ -155,8 +164,11 @@ const RegistrationForm: React.FC = () => {
 				</div>
 
 				{/* Message */}
-				<label className="subheading">MESSAGE</label>
+				<label className="subheading" htmlFor="message">
+					MESSAGE
+				</label>
 				<textarea
+					id="message"
 					name="message"
 					value={formData.message}
 					onChange={handleChange}
@@ -168,7 +180,62 @@ const RegistrationForm: React.FC = () => {
 					{isSubmitting ? "Submitting..." : "SUBMIT"}
 				</button>
 			</form>
-			{responseMessage && <p>{responseMessage}</p>}
+			{responseMessage && <p className="response-message">{responseMessage}</p>}
+
+			<style jsx>{`
+				.container {
+					max-width: 800px;
+					margin: 0 auto;
+					padding: 20px;
+				}
+				.form-container {
+					display: flex;
+					flex-direction: column;
+					gap: 1rem;
+				}
+				.speakers-container {
+					display: grid;
+					grid-template-columns: 1fr;
+					gap: 1rem;
+				}
+				@media (min-width: 600px) {
+					.speakers-container {
+						grid-template-columns: 1fr 1fr;
+					}
+				}
+				@media (min-width: 900px) {
+					.speakers-container {
+						grid-template-columns: repeat(3, 1fr);
+					}
+				}
+				.input,
+				textarea {
+					width: 100%;
+					padding: 8px;
+					font-size: 1rem;
+					border: 1px solid #ccc;
+					border-radius: 4px;
+				}
+				.submit-button {
+					padding: 10px 20px;
+					font-size: 1rem;
+					background-color: #0070f3;
+					color: #fff;
+					border: none;
+					border-radius: 4px;
+					cursor: pointer;
+					transition: background-color 0.3s;
+				}
+				.submit-button:hover {
+					background-color: #005bb5;
+				}
+				.response-message {
+					margin-top: 1rem;
+					font-size: 1rem;
+					color: green;
+					text-align: center;
+				}
+			`}</style>
 		</div>
 	);
 };

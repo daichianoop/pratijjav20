@@ -1,9 +1,8 @@
 /** @format */
 
-import{ Schema, Document, model } from "mongoose";
+import mongoose, { Document, Schema, Model } from "mongoose";
 
-// Define an interface for the cross-team form data
-interface Form1 extends Document {
+export interface Form1 extends Document {
 	team_name: string;
 	speaker_1: string;
 	email_1: string;
@@ -17,12 +16,11 @@ interface Form1 extends Document {
 	email_3?: string;
 	contact_3?: string;
 	institution_3?: string;
-	accomodation: boolean;
+	accommodation: boolean;
 	message?: string;
 }
 
-// Define the schema
-const FormSchema: Schema<Form1> = new Schema(
+const FormSchema: Schema<Form1> = new mongoose.Schema(
 	{
 		team_name: { type: String, required: true },
 		speaker_1: { type: String, required: true },
@@ -37,13 +35,14 @@ const FormSchema: Schema<Form1> = new Schema(
 		email_3: { type: String },
 		contact_3: { type: String },
 		institution_3: { type: String },
-		accomodation: { type: Boolean, required: true },
+		accommodation: { type: Boolean, required: true },
 		message: { type: String },
 	},
 	{ timestamps: true }
 );
 
-// Create and export the model
-const Form1Model = model<Form1>("Form1", FormSchema);
+// Check if the model exists, else create it
+const Form1Model: Model<Form1> =
+	mongoose.models.Form1 || mongoose.model<Form1>("Form1", FormSchema);
 
 export default Form1Model;

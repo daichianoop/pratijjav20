@@ -21,7 +21,7 @@ const FlipCard: React.FC = () => {
                                <Image src={"/poster-21.png"} width={390} height={500} alt={"21"}/>
                            </div>
                            <div className="px-7 py-9 flip-card-back bg-[url('/flipcardbg.png')] bg-cover bg-center h-screen">
-                               <p className={`title mb-5 text-4xl ${yeseva.className}`}>INCEPTION</p>
+                               <p className={`title1234 mb-5 text-4xl ${yeseva.className}`}>INCEPTION</p>
                                <p className={`h-full text-lg ${yeseva.className}`}>Lorem ipsum dolor sit amet, consectetur adipiscing
                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -36,7 +36,7 @@ const FlipCard: React.FC = () => {
                                <Image src={"/poster-22.png"} width={390} height={500} alt={"21"}/>
                            </div>
                            <div className="px-7 py-9 flip-card-back bg-[url('/flipcardbg.png')] bg-cover bg-center h-screen">
-                           <p className={`title mb-5 text-4xl ${yeseva.className}`}>DISCLOSURE</p>
+                           <p className={`title1234 mb-5 text-4xl ${yeseva.className}`}>DISCLOSURE</p>
                                <p className={`h-full text-lg ${yeseva.className}`}>Lorem ipsum dolor sit amet, consectetur adipiscing
                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -51,7 +51,7 @@ const FlipCard: React.FC = () => {
                                <Image src={"/poster-23.png"} width={390} height={500} alt={"21"}/>
                            </div>
                            <div className="px-7 py-9 flip-card-back bg-[url('/flipcardbg.png')] bg-cover bg-center h-screen">
-                               <p className={`title mb-5 text-4xl ${yeseva.className}`}>EPILOGUE</p>
+                               <p className={`title1234 mb-5 text-4xl ${yeseva.className}`}>EPILOGUE</p>
                                <p className={`h-full text-lg ${yeseva.className}`}>Lorem ipsum dolor sit amet, consectetur adipiscing
                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco

@@ -45,25 +45,27 @@ const CountdownTimer: React.FC = () => {
     }, []);
 
     return (
-        <div className="countdown-container">
-            <div className="year">2025</div>
-            <div className="timer-container">
-                <div className="time-box">
-                    <p className="time-value">{timeLeft.days.toString().padStart(2, "0")}</p>
-                    <p className="time-label">DAYS</p>
-                </div>
-                <div className="time-box">
-                    <p className="time-value">{timeLeft.hours.toString().padStart(2, "0")}</p>
-                    <p className="time-label">HRS</p>
-                </div>
-                <div className="separator">:</div>
-                <div className="time-box">
-                    <p className="time-value">{timeLeft.minutes.toString().padStart(2, "0")}</p>
-                    <p className="time-label">MIN</p>
-                </div>
-                <div className="time-box">
-                    <p className="time-value">{timeLeft.seconds.toString().padStart(2, "0")}</p>
-                    <p className="time-label">SEC</p>
+        <div className={"absolute right-20 bottom-20"}>
+            <div className="countdown-container">
+                <div className="year">2025</div>
+                <div className="timer-container">
+                    <div className="time-box">
+                        <p className="time-value">{timeLeft.days.toString().padStart(2, "0")}</p>
+                        <p className="time-label">DAYS</p>
+                    </div>
+                    <div className="time-box">
+                        <p className="time-value">{timeLeft.hours.toString().padStart(2, "0")}</p>
+                        <p className="time-label">HRS</p>
+                    </div>
+                    <div className="separator">:</div>
+                    <div className="time-box">
+                        <p className="time-value">{timeLeft.minutes.toString().padStart(2, "0")}</p>
+                        <p className="time-label">MIN</p>
+                    </div>
+                    <div className="time-box">
+                        <p className="time-value">{timeLeft.seconds.toString().padStart(2, "0")}</p>
+                        <p className="time-label">SEC</p>
+                    </div>
                 </div>
             </div>
         </div>

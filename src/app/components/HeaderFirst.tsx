@@ -1,20 +1,19 @@
 /** @format */
-
 import React from "react";
 import Image from "next/image";
 import "./styles/headerFirstPage.css";
+import CountdownTimer from "@/app/components/CountDownTimer";
 
 const HeaderFirstPage: React.FC = () => {
 	return (
-		<div className={"fakebody"}>
-
+		<div className={"fakebody bg-no-repeat bg-fixed bg-contain"}>
 			<div className="container">
 				<div className="title">
 					20<sup>th</sup> Edition Of
 				</div>
 				<div className="one-of">One Of</div>
 				<div className="debate-text">
-					The Largest Asian Parliamentary Debate <br /> 2025
+					The Largest Asian Parliamentary Debate <br/> 2025
 				</div>
 				<div className="image">
 					<Image
@@ -25,6 +24,9 @@ const HeaderFirstPage: React.FC = () => {
 						priority // Loads the image faster for better performance
 					/>
 				</div>
+			</div>
+			<div className={"relative right-0"}>
+				<CountdownTimer/>
 			</div>
 		</div>
 	);

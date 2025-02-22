@@ -21,7 +21,7 @@ declare global {
 }
 
 // Use globalThis to store our cache; if it doesn't exist, initialize it.
-let cached: MongooseCache = globalThis.mongooseCache || { conn: null, promise: null };
+const cached: MongooseCache = globalThis.mongooseCache || { conn: null, promise: null };
 globalThis.mongooseCache = cached;
 
 async function dbConnect() {
@@ -30,9 +30,7 @@ async function dbConnect() {
   }
 
   if (!cached.promise) {
-    cached.promise = mongoose.connect(MONGODB_URI).then((mongoose) => {
-      return mongoose;
-    });
+    cached.promise = mongoose.connect(MONGODB_URI).then((mongoose) => mongoose);
   }
   cached.conn = await cached.promise;
   return cached.conn;

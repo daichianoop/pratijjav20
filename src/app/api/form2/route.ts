@@ -1,31 +1,48 @@
 /** @format */
 
+// app/api/form2/route.ts
 import { NextResponse } from "next/server";
-import dbConnect from "@/lib/dbConnect"; // Make sure this file sets up your MongoDB connection
+import type { NextRequest } from "next/server";
+import dbConnect from "@/lib/dbConnect";
 import Form2Model from "@/models/form2";
 
-// POST handler for the API route
-export async function POST(request: Request) {
+// Define an interface for the form data corresponding to your Form2 schema
+interface Form2Data {
+	email: string;
+	institution: string;
+	name_poc1: string;
+	contact_poc1: string;
+	email_poc1: string;
+	name_poc2?: string;
+	contact_poc2?: string;
+	email_poc2?: string;
+	slots: number;
+	ajudicator_slots: number;
+	accomodation: boolean;
+	message?: string;
+}
+
+export async function POST(request: NextRequest) {
 	try {
-		// Connect to MongoDB
+		// Connect to the database
 		await dbConnect();
 
-		// Parse the JSON body from the request
-		const formData = await request.json();
+		// Parse and type the JSON request data
+		const formData: Form2Data = await request.json();
 
-		// Create a new Form2 document using the Mongoose model
-		const newFormEntry = new Form2Model(formData);
-		await newFormEntry.save();
+		// Create a new document using Form2Model
+		const formEntry = new Form2Model(formData);
+		const savedEntry = await formEntry.save();
 
-		// Return a success response with the created document
+		// Return a success response with the saved document
+		return NextResponse.json({
+			message: "Form data received successfully",
+			data: savedEntry,
+		});
+	} catch (error) {
+		console.error("Error processing form data:", error);
 		return NextResponse.json(
-			{ success: true, data: newFormEntry },
-			{ status: 201 }
-		);
-	} catch (error: any) {
-		// Return an error response with status 500
-		return NextResponse.json(
-			{ success: false, error: error.message },
+			{ message: "Internal Server Error" },
 			{ status: 500 }
 		);
 	}

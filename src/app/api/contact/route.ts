@@ -1,51 +1,39 @@
 /** @format */
 
 import { NextResponse } from "next/server";
-import Contact from "@/models/contact"; // Adjust the path as necessary
-import dbConnect from "@/lib/dbConnect"; // Ensure you have a helper to connect to MongoDB
+import type { NextRequest } from "next/server";
+import dbConnect from "@/lib/dbConnect";
+import Contact from "@/models/contact";
 
-export async function POST(req: Request) {
+// Define an interface for the form data corresponding to your Contact schema
+interface ContactData {
+	email: string;
+	name: string;
+	phone: string;
+	issue: string;
+}
+
+export async function POST(request: NextRequest) {
 	try {
-		// Connect to MongoDB
+		// Connect to the database
 		await dbConnect();
 
-		// Parse the JSON body from the request
-		const body = await req.json();
-		const { name, email, message, issue, phone } = body;
+		// Parse and type the JSON request data
+		const formData: ContactData = await request.json();
 
-		// Validate input
-		if (!name || !email || !message || !issue || !phone) {
-			return NextResponse.json(
-				{
-					message:
-						"All fields are required (name, email, message, issue, phone)",
-				},
-				{ status: 400 }
-			);
-		}
+		// Create a new document using the Contact model
+		const contactEntry = new Contact(formData);
+		const savedEntry = await contactEntry.save();
 
-		// Create a new contact document
-		const newContact = new Contact({
-			name,
-			email,
-			message,
-			issue,
-			phone,
+		// Return a success response with the saved document
+		return NextResponse.json({
+			message: "Contact data received successfully",
+			data: savedEntry,
 		});
-
-		// Save the contact to the database
-		await newContact.save();
-
-		// Return a success response
+	} catch (error) {
+		console.error("Error processing contact data:", error);
 		return NextResponse.json(
-			{ message: "Contact saved successfully", data: newContact },
-			{ status: 201 }
-		);
-	} catch (error: any) {
-		console.error("Error saving contact:", error);
-		// Return an error response without exposing sensitive error details
-		return NextResponse.json(
-			{ message: "Error saving contact" },
+			{ message: "Internal Server Error" },
 			{ status: 500 }
 		);
 	}

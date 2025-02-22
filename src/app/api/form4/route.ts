@@ -1,32 +1,41 @@
 /** @format */
 
 import { NextResponse } from "next/server";
-import dbConnect from "@/lib/dbConnect"; // Ensure your MongoDB connection helper is set up
-import Form4Model from "@/models/form4"; // Adjust the path if needed
+import type { NextRequest } from "next/server";
+import dbConnect from "@/lib/dbConnect";
+import Form4Model from "@/models/form4";
 
-// POST handler for Form4 submissions
-export async function POST(request: Request) {
-	try {
-		// Connect to MongoDB
-		await dbConnect();
+// Define an interface for the form data corresponding to your Form4 schema
+interface Form4Data {
+  name: string;
+  phone: string;
+  email: string;
+  institution: string;
+  speaking: boolean;
+}
 
-		// Parse the JSON body from the request
-		const formData = await request.json();
+export async function POST(request: NextRequest) {
+  try {
+    // Connect to the database
+    await dbConnect();
 
-		// Create a new document using the Form4 model
-		const newFormEntry = new Form4Model(formData);
-		await newFormEntry.save();
+    // Parse and type the JSON request data
+    const formData: Form4Data = await request.json();
 
-		// Return a JSON response with status 201 (Created)
-		return NextResponse.json(
-			{ success: true, data: newFormEntry },
-			{ status: 201 }
-		);
-	} catch (error: any) {
-		// Return an error response with status 500 (Internal Server Error)
-		return NextResponse.json(
-			{ success: false, error: error.message },
-			{ status: 500 }
-		);
-	}
+    // Create a new document using Form4Model
+    const formEntry = new Form4Model(formData);
+    const savedEntry = await formEntry.save();
+
+    // Return a success response with the saved document
+    return NextResponse.json({
+      message: "Form data received successfully",
+      data: savedEntry,
+    });
+  } catch (error) {
+    console.error("Error processing form data:", error);
+    return NextResponse.json(
+      { message: "Internal Server Error" },
+      { status: 500 }
+    );
+  }
 }

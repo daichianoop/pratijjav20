@@ -1,24 +1,42 @@
+/** @format */
+
 import { NextResponse } from "next/server";
-import dbConnect from "@/lib/dbConnect"; // Ensure this is your MongoDB connection helper
-import Form3Model from "@/models/form3"; // Adjust the path if needed
+import type { NextRequest } from "next/server";
+import dbConnect from "@/lib/dbConnect";
+import Form3Model from "@/models/form3";
 
-// POST handler for Form3 submissions
-export async function POST(request: Request) {
-  try {
-    // Connect to MongoDB
-    await dbConnect();
+// Define an interface for the form data corresponding to your Form3 schema
+interface Form3Data {
+	name: string;
+	email: string;
+	contact: string;
+	institution: string;
+	accomodation: boolean;
+	message?: string;
+}
 
-    // Parse the incoming JSON data from the request
-    const formData = await request.json();
+export async function POST(request: NextRequest) {
+	try {
+		// Connect to the database
+		await dbConnect();
 
-    // Create a new document using the Form3 model
-    const newFormEntry = new Form3Model(formData);
-    await newFormEntry.save();
+		// Parse and type the JSON request data
+		const formData: Form3Data = await request.json();
 
-    // Return a JSON response with status 201 (Created)
-    return NextResponse.json({ success: true, data: newFormEntry }, { status: 201 });
-  } catch (error: any) {
-    // Return an error response with status 500 (Internal Server Error)
-    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
-  }
+		// Create a new document using Form3Model
+		const formEntry = new Form3Model(formData);
+		const savedEntry = await formEntry.save();
+
+		// Return a success response with the saved document
+		return NextResponse.json({
+			message: "Form data received successfully",
+			data: savedEntry,
+		});
+	} catch (error) {
+		console.error("Error processing form data:", error);
+		return NextResponse.json(
+			{ message: "Internal Server Error" },
+			{ status: 500 }
+		);
+	}
 }

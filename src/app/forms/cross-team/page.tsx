@@ -82,7 +82,7 @@ const RegistrationForm: React.FC = () => {
 					contact_3: formData.speakers[2].contact,
 					institution_3: formData.speakers[2].institution,
 					// Map the client's "accommodation" field to the model's "accomodation"
-					accomodation: formData.accommodation,
+					accommodation: formData.accommodation,
 					message: formData.message,
 				}),
 			});

@@ -2,7 +2,6 @@
 
 "use client";
 import React, { useState } from "react";
-import "../form-styles/cross-team.css";
 
 interface Speaker {
 	name: string;
@@ -107,135 +106,112 @@ const RegistrationForm: React.FC = () => {
 	};
 
 	return (
-		<div className="container">
-			<h1>CROSS TEAM REGISTRATION</h1>
+		<div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
+			<h1 className="text-3xl font-bold mb-6 text-center">
+				CROSS TEAM REGISTRATION
+			</h1>
 
-			<form onSubmit={handleSubmit} className="form-container">
+			<form
+				onSubmit={handleSubmit}
+				className="w-full max-w-3xl bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
 				{/* Team Name */}
-				<label className="subheading" htmlFor="teamName">
-					TEAM NAME
-				</label>
-				<input
-					type="text"
-					id="teamName"
-					name="teamName"
-					value={formData.teamName}
-					onChange={handleChange}
-					placeholder="Team Name"
-					required
-				/>
-
-				{/* Speakers Section */}
-				<div className="speakers-container">
-					{formData.speakers.map((speaker, index) => (
-						<div key={index} className="speaker">
-							<h3 className="subheading">SPEAKER - {index + 1}</h3>
-							{Object.keys(speaker).map((field) => (
-								<input
-									key={field}
-									type={field === "email" ? "email" : "text"}
-									name={field}
-									value={String(speaker[field as keyof Speaker])}
-									onChange={(e) => handleChange(e, index)}
-									placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
-									required
-								/>
-							))}
-						</div>
-					))}
+				<div className="mb-4">
+					<label
+						htmlFor="teamName"
+						className="block text-gray-700 text-sm font-bold mb-2">
+						TEAM NAME
+					</label>
+					<input
+						type="text"
+						id="teamName"
+						name="teamName"
+						value={formData.teamName}
+						onChange={handleChange}
+						placeholder="Team Name"
+						required
+						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					/>
 				</div>
 
-				{/* Accommodation */}
-				<div className="checkbox-container">
-					<label className="subheading" htmlFor="accommodation">
-						ACCOMMODATION
-					</label>
-					<div>
-						<span>Need Accommodation?</span>
-						<input
-							type="checkbox"
-							id="accommodation"
-							name="accommodation"
-							checked={formData.accommodation}
-							onChange={handleChange}
-							className={`mt-2 ${formData.accommodation ? "checked" : ""}`}
-						/>
+				{/* Speakers Section */}
+				<div className="mb-4">
+					<h2 className="text-xl font-bold mb-2 text-center">Speakers</h2>
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+						{formData.speakers.map((speaker, index) => (
+							<div key={index} className="p-4 border rounded shadow">
+								<h3 className="text-lg font-semibold mb-2 text-center">
+									SPEAKER - {index + 1}
+								</h3>
+								{Object.keys(speaker).map((field) => (
+									<div key={field} className="mb-2">
+										<input
+											type={field === "email" ? "email" : "text"}
+											name={field}
+											value={String(speaker[field as keyof Speaker])}
+											onChange={(e) => handleChange(e, index)}
+											placeholder={
+												field.charAt(0).toUpperCase() + field.slice(1)
+											}
+											required
+											className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+										/>
+									</div>
+								))}
+							</div>
+						))}
 					</div>
 				</div>
 
+				{/* Accommodation */}
+				<div className="mb-4 flex items-center justify-center">
+					<label
+						htmlFor="accommodation"
+						className="mr-2 text-gray-700 text-sm font-bold">
+						Need Accommodation?
+					</label>
+					<input
+						type="checkbox"
+						id="accommodation"
+						name="accommodation"
+						checked={formData.accommodation}
+						onChange={handleChange}
+						className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+					/>
+				</div>
+
 				{/* Message */}
-				<label className="subheading" htmlFor="message">
-					MESSAGE
-				</label>
-				<textarea
-					id="message"
-					name="message"
-					value={formData.message}
-					onChange={handleChange}
-					placeholder="Anything else you would like us to know?"
-				/>
+				<div className="mb-6">
+					<label
+						htmlFor="message"
+						className="block text-gray-700 text-sm font-bold mb-2">
+						MESSAGE
+					</label>
+					<textarea
+						id="message"
+						name="message"
+						value={formData.message}
+						onChange={handleChange}
+						placeholder="Anything else you would like us to know?"
+						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+					/>
+				</div>
 
 				{/* Submit Button */}
-				<button type="submit" className="submit-button" disabled={isSubmitting}>
-					{isSubmitting ? "Submitting..." : "SUBMIT"}
-				</button>
+				<div className="flex items-center justify-center">
+					<button
+						type="submit"
+						className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
+						disabled={isSubmitting}>
+						{isSubmitting ? "Submitting..." : "SUBMIT"}
+					</button>
+				</div>
 			</form>
-			{responseMessage && <p className="response-message">{responseMessage}</p>}
 
-			<style jsx>{`
-				.container {
-					max-width: 800px;
-					margin: 0 auto;
-					padding: 20px;
-				}
-				.form-container {
-					display: flex;
-					flex-direction: column;
-					gap: 1rem;
-				}
-				.speakers-container {
-					display: grid;
-					grid-template-columns: 1fr;
-					gap: 1rem;
-				}
-				@media (min-width: 600px) {
-					.speakers-container {
-						grid-template-columns: 1fr 1fr;
-					}
-				}
-				@media (min-width: 900px) {
-					.speakers-container {
-						grid-template-columns: repeat(3, 1fr);
-					}
-				}
-				.input,
-				textarea {
-					width: 100%;
-					padding: 8px;
-					font-size: 1rem;
-					border: 1px solid #ccc;
-					border-radius: 4px;
-				}
-				.submit-button {
-					padding: 10px 20px;
-					font-size: 1rem;
-					background-color: #0070f3;
-					color: #fff;
-					border: none;
-					border-radius: 4px;
-					cursor: pointer;
-					transition: background-color 0.3s;
-				}
-				.submit-button:hover {
-					background-color: #005bb5;
-				}
-				.response-message {
-					margin-top: 1rem;
-					font-size: 1rem;
-					color: green;
-					text-align: center;
-				}
-			`}</style>
+			{responseMessage && (
+				<p className="text-center text-green-600 font-semibold">
+					{responseMessage}
+				</p>
+			)}
 		</div>
 	);
 };

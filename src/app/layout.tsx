@@ -80,10 +80,10 @@ export default function RootLayout({
 
 				<title>Pratijja V 20</title>
 			</head>
+			<Navbar />
 
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-				<Navbar />
 				{children}
 			</body>
 			<Footer />

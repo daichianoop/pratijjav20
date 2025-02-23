@@ -181,8 +181,6 @@ const RegistrationForm: React.FC = () => {
 				</button>
 			</form>
 			{responseMessage && <p className="response-message">{responseMessage}</p>}
-
-			
 		</div>
 	);
 };

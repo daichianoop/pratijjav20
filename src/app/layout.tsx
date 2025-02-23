@@ -56,23 +56,15 @@ One of India's premier debating tournaments, Pratijja attracts debaters from acr
 
 // Destructure metadata with fallback values
 const {
-	title = "Default Title",
-	description = "Default description",
 	openGraph,
-	twitter,
-	icons,
+	
 } = metadata;
 
 // Safe access for openGraph properties
-const ogTitle = openGraph?.title ?? "Default OG Title";
 const ogDescription = openGraph?.description ?? "Default OG Description";
-const ogUrl = openGraph?.url ?? "";
 const ogSiteName = openGraph?.siteName ?? "";
 
-// Safe access for twitter properties
-const twitterTitle = twitter?.title ?? "Default Twitter Title";
-const twitterDescription =
-	twitter?.description ?? "Default Twitter Description";
+
 
 export default function RootLayout({
 	children,

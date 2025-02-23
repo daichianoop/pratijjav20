@@ -30,7 +30,8 @@ const IAform: React.FC = () => {
 	const handleChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 	) => {
-		const { name, value, type, checked } = e.target;
+		const { name, value, type } = e.target;
+		const checked = (e.target as HTMLInputElement).checked;
 		setFormData((prev) => ({
 			...prev,
 			[name]: type === "checkbox" ? checked : value,
@@ -40,33 +41,28 @@ const IAform: React.FC = () => {
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 
-		// Map the form data to the API schema.
-		// Assuming `contact` maps to `phone` and speaking is determined by speakingCredentials.
 		const payload = {
 			name: formData.name,
 			phone: formData.contact,
 			email: formData.email,
 			institution: formData.institution,
-			speaking: formData.speakingCredentials.trim() !== "",
+			speakingCredentials: formData.speakingCredentials,
+			judgingCredentials: formData.judgingCredentials,
+			accommodation: formData.accommodation,
 		};
 
 		try {
 			const response = await fetch("/api/form4", {
 				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
+				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify(payload),
 			});
 
-			if (!response.ok) {
-				throw new Error("Network response was not ok");
-			}
+			if (!response.ok) throw new Error("Network response was not ok");
 
 			const result = await response.json();
 			alert("Form submitted successfully!");
 			console.log("Form Submitted:", result);
-			// Clear the form fields by resetting the state
 			setFormData(initialFormData);
 		} catch (error) {
 			console.error("Error submitting form:", error);

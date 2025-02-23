@@ -2,8 +2,12 @@
 
 import { Schema, Document, model, Model } from "mongoose";
 
+declare global {
+	var Form4Model: Model<Form4> | undefined;
+}
+
 // Define an interface for IA/SA application
-interface Form4 extends Document {
+export interface Form4 extends Document {
 	name: string;
 	phone: string;
 	email: string;
@@ -27,7 +31,7 @@ const Form4Schema: Schema<Form4> = new Schema(
 	{ timestamps: true }
 );
 
-// Check if the model is already compiled using globalThis with proper typing
+// Check if the model is already compiled using globalThis
 const Form4Model: Model<Form4> =
 	globalThis.Form4Model ?? model<Form4>("Form4", Form4Schema);
 globalThis.Form4Model = Form4Model;

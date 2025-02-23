@@ -1,6 +1,6 @@
 /** @format */
 
-import { Schema, Document, model } from "mongoose";
+import { Schema, Document, model, Model } from "mongoose";
 
 // Define an interface for IA/SA application
 interface Form4 extends Document {
@@ -27,9 +27,9 @@ const Form4Schema: Schema<Form4> = new Schema(
 	{ timestamps: true }
 );
 
-// Check if the model is already compiled
-const Form4Model =
-	(global as any).Form4Model || model<Form4>("Form4", Form4Schema);
-(global as any).Form4Model = Form4Model;
+// Check if the model is already compiled using globalThis with proper typing
+const Form4Model: Model<Form4> =
+	globalThis.Form4Model ?? model<Form4>("Form4", Form4Schema);
+globalThis.Form4Model = Form4Model;
 
 export default Form4Model;

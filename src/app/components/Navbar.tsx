@@ -98,7 +98,6 @@ const Navbar = () => {
 			</nav>
 
 			{/* Push Down Content to Prevent Overlap */}
-			<div className="pt-[80px]" />
 		</>
 	);
 };

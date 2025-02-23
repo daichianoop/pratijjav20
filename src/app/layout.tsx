@@ -54,13 +54,69 @@ One of India's premier debating tournaments, Pratijja attracts debaters from acr
 	},
 };
 
+// Destructure metadata with fallback values
+const {
+	title = "Default Title",
+	description = "Default description",
+	openGraph,
+	twitter,
+	icons,
+} = metadata;
+
 export default function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	// Set up safe access for openGraph properties
+	const ogTitle = openGraph?.title ?? "Default OG Title";
+	const ogDescription = openGraph?.description ?? "Default OG Description";
+	const ogUrl = openGraph?.url ?? "";
+	const ogSiteName = openGraph?.siteName ?? "";
+	const ogType = openGraph?.type ?? "website";
+	const ogImage =
+		openGraph?.images && openGraph.images[0]?.url
+			? openGraph.images[0].url
+			: "";
+
+	// Set up safe access for twitter properties
+	const twitterCard = twitter?.card ?? "summary";
+	const twitterTitle = twitter?.title ?? "Default Twitter Title";
+	const twitterDescription =
+		twitter?.description ?? "Default Twitter Description";
+	const twitterImage =
+		twitter?.images && twitter.images[0] ? twitter.images[0] : "";
+
 	return (
 		<html lang="en">
+			<head>
+				{/* Favicon */}
+				<link rel="icon" href={icons?.icon ?? "/favicon.ico"} sizes="any" />
+				<link rel="icon" href="/icon.svg" type="image/svg+xml" />
+				<link
+					rel="apple-touch-icon"
+					href={icons?.apple ?? "/apple-touch-icon.png"}
+				/>
+
+				{/* Basic Meta */}
+				<meta name="description" content={description} />
+
+				{/* Open Graph / Facebook Meta Tags */}
+				<meta property="og:title" content={ogTitle} />
+				<meta property="og:description" content={ogDescription} />
+				<meta property="og:url" content={ogUrl} />
+				<meta property="og:site_name" content={ogSiteName} />
+				<meta property="og:type" content={ogType} />
+				<meta property="og:image" content={ogImage} />
+
+				{/* Twitter Meta Tags */}
+				<meta name="twitter:card" content={twitterCard} />
+				<meta name="twitter:title" content={twitterTitle} />
+				<meta name="twitter:description" content={twitterDescription} />
+				<meta name="twitter:image" content={twitterImage} />
+
+				<title>{title}</title>
+			</head>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 				{children}

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
+import Navbar from "@/app/components/Navbar";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -55,16 +56,11 @@ One of India's premier debating tournaments, Pratijja attracts debaters from acr
 };
 
 // Destructure metadata with fallback values
-const {
-	openGraph,
-	
-} = metadata;
+const { openGraph } = metadata;
 
 // Safe access for openGraph properties
 const ogDescription = openGraph?.description ?? "Default OG Description";
 const ogSiteName = openGraph?.siteName ?? "";
-
-
 
 export default function RootLayout({
 	children,
@@ -84,11 +80,14 @@ export default function RootLayout({
 
 				<title>Pratijja V 20</title>
 			</head>
+
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+				<Navbar />
 				{children}
+			<Footer  />
+
 			</body>
-			<Footer />
 		</html>
 	);
 }

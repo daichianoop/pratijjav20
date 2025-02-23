@@ -2,7 +2,9 @@
 
 import { Schema, Document, model, Model } from "mongoose";
 
+// Extend the global scope inline to include our Form4Model type
 declare global {
+	// Using var instead of let ensures compatibility with globalThis
 	var Form4Model: Model<Form4> | undefined;
 }
 

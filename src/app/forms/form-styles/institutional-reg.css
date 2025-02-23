@@ -90,8 +90,8 @@ textarea {
 /* Slots container styling */
 .slots-container {
 	background: radial-gradient(circle, #7f654a 0%, #ebce89 50%, #7f654a 100%);
-	width: 70%;
-	height: 40px;
+	width: 80%;
+	height: 55px;
 	display: flex;
 	align-items: center;
 	justify-content: center;

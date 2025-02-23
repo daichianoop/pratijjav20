@@ -1,29 +1,37 @@
+/** @format */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
 body {
-    font-family: Arial, sans-serif;
-    color: white;
-    min-height: 100vh;
-    margin: 0 auto;
+	font-family: Arial, sans-serif;
+	color: white;
+	min-height: 100vh;
+	margin: 0;
 }
-.body-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.body-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 }
+
 .container {
-    background-image: url("/formbg.png");
-    background-position: center;
-    background-size: cover;
-    padding: 20px 40px;
-    text-align: center;
+	background-image: url("/formbg.png");
+	background-position: center;
+	background-size: cover;
+	padding: 20px 40px;
+	text-align: center;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
 }
 
 h1 {
-    font-size: 50px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #EBCE89;
-    margin-bottom: 10px;
+	font-size: 50px;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	color: #ebce89;
+	margin-bottom: 10px;
 }
 
 .subheading,
@@ -32,136 +40,180 @@ textarea,
 p,
 label,
 .submit-button {
-    font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 }
 
-input, textarea {
-    width: 90%;
-    padding: 12px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 10px;
-    background-color: #EBCE89;
-    color: black;
-    font-size: 16px;
-    transition: 0.3s ease-in-out;
+input,
+textarea {
+	width: 90%;
+	max-width: 600px;
+	padding: 12px;
+	margin: 10px auto;
+	border: none;
+	border-radius: 10px;
+	background-color: #ebce89;
+	color: black;
+	font-size: 16px;
+	transition: 0.3s ease-in-out;
+	display: block;
 }
 
-input:hover, textarea:hover {
-    background-color: #EBCE89;
+input:hover,
+textarea:hover {
+	background-color: #ebce89;
 }
 
-input:focus, textarea:focus {
-    outline: none;
-    border: 2px solid #2E1413;
-    background-color: #EBCE89;
+input:focus,
+textarea:focus {
+	outline: none;
+	border: 2px solid #2e1413;
+	background-color: #ebce89;
 }
 
-
-input::placeholder, textarea::placeholder {
-    color: rgb(0, 0, 0);
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+input::placeholder,
+textarea::placeholder {
+	color: rgb(0, 0, 0);
+	font-family: "Poppins", sans-serif;
+	font-size: 14px;
 }
 
 textarea {
-    height: 120px;
-    resize: none;
+	height: 120px;
+	resize: none;
 }
 
 .submit-button {
-    background: radial-gradient(circle, #EBCE89 30%, #2E1413 100%);
-    color: #2E1413;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 16px;
-    width: 160px;
-    margin-top: 15px;
+	background: radial-gradient(circle, #ebce89 30%, #2e1413 100%);
+	color: #2e1413;
+	font-weight: bold;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+	font-size: 16px;
+	width: 160px;
+	margin: 15px auto;
+	display: block;
 }
 
 .submit-button:hover {
-    background: radial-gradient(circle,  #7F654A 0%, #EBCE89 50%,#7F654A 100%);
-    transform: scale(1.05);
+	background: radial-gradient(circle, #7f654a 0%, #ebce89 50%, #7f654a 100%);
+	transform: scale(1.05);
 }
+
 .accommodation-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
-    font-size: 18px;
-
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin-bottom: 20px;
+	font-size: 18px;
 }
+
 .checkbox-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    font-size: 18px;
-
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0;
+	margin-bottom: 20px;
+	font-size: 18px;
 }
-.checkbox-container label {
-    font-size: 14px;
-    font-family: "Poppins", sans-serif;
-    color: white;
 
+checkbox-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0;
+	margin-bottom: 20px;
+	font-size: 18px;
 }
 
 .checkbox-container input {
-    width: 12px;
-    height: 12px;
-    cursor: pointer;
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+}
+
+.checkbox-container label {
+	margin: 0 0 0 5px; /* small left margin for slight spacing */
+	padding: 0;
+	font-size: 18px;
+	font-family: "Poppins", sans-serif;
+	color: #ebce89;
 }
 
 .accommodation-container label {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .tick-container {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 40px;
-    }
-
-    .subheading {
-        font-size: 18px;
-    }
-
-    input, textarea {
-        width: 100%;
-        font-size: 14px;
-    }
-
-    .submit-button {
-        font-size: 14px;
-        width: 140px;
-    }
-}
-.submit-button:hover {
-    background: radial-gradient(circle, #7F654A 0%, #EBCE89 50%,#7F654A 100%);
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 10px;
 }
 
 .subheading {
-    font-size:2rem;
-    background: radial-gradient(circle, #7F654A 0%, #EBCE89 50%,#7F654A 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+	font-size: 2rem;
+	background: radial-gradient(circle, #7f654a 0%, #ebce89 50%, #7f654a 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: inline-block;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.container {
+		width: 100%;
+		padding: 20px;
+	}
+
+	h1 {
+		font-size: 40px;
+	}
+
+	.subheading {
+		font-size: 1.8rem;
+	}
+
+	input,
+	textarea {
+		width: 95%;
+		font-size: 14px;
+	}
+
+	.submit-button {
+		font-size: 14px;
+		width: 140px;
+	}
+}
+
+@media (max-width: 480px) {
+	.container {
+		width: 100%;
+		padding: 15px;
+	}
+
+	h1 {
+		font-size: 32px;
+	}
+
+	.subheading {
+		font-size: 1.6rem;
+	}
+
+	input,
+	textarea {
+		width: 100%;
+		font-size: 13px;
+	}
+
+	.submit-button {
+		width: 100%;
+		padding: 10px;
+		font-size: 13px;
+	}
 }

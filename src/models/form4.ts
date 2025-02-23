@@ -1,41 +1,33 @@
 /** @format */
 
-import { Schema, Document, model, Model } from "mongoose";
-
-// Extend the global scope inline to include our Form4Model type
-declare global {
-	// Using var instead of let ensures compatibility with globalThis
-	var Form4Model: Model<Form4> | undefined;
-}
+import { Schema, Document, model } from "mongoose";
 
 // Define an interface for IA/SA application
-export interface Form4 extends Document {
+interface Form4 extends Document {
 	name: string;
-	phone: string;
 	email: string;
+	contact: string;
 	institution: string;
-	speakingCredentials: string;
-	judgingCredentials: string;
+	speakingCredentials?: string;
+	judgingCredentials?: string;
 	accommodation: boolean;
 }
 
-// Define the schema
-const Form4Schema: Schema<Form4> = new Schema(
+// Define the schema for IA/SA application
+const Form4Schema = new Schema<Form4>(
 	{
 		name: { type: String, required: true },
-		phone: { type: String, required: true },
 		email: { type: String, required: true },
+		contact: { type: String, required: true }, // Renamed from "phone" to match Form3
 		institution: { type: String, required: true },
-		speakingCredentials: { type: String, required: false },
-		judgingCredentials: { type: String, required: false },
+		speakingCredentials: { type: String },
+		judgingCredentials: { type: String },
 		accommodation: { type: Boolean, required: true },
 	},
 	{ timestamps: true }
 );
 
-// Check if the model is already compiled using globalThis
-const Form4Model: Model<Form4> =
-	globalThis.Form4Model ?? model<Form4>("Form4", Form4Schema);
-globalThis.Form4Model = Form4Model;
+// Create and export the model
+const Form4Model = model<Form4>("Form4", Form4Schema);
 
 export default Form4Model;

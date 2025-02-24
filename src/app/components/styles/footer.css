@@ -5,14 +5,11 @@
  */
 
 .footer {
-	background-color: #ebce89;
+	background-color: #ebce89; /* Updated from black to #EBCE89 */
 	padding: 30px 20px;
 	text-align: center;
-	width: 100%;
-	box-sizing: border-box;
 }
 
-/* Footer Title */
 .footer-title {
 	font-size: 2rem;
 	font-weight: bold;
@@ -22,62 +19,57 @@
 
 /* Full-Width Google Maps */
 .full-width-map iframe {
-	width: 100%;
-	max-width: 100%;
-	height: 250px; /* Adjusted for better visibility */
+	width: 90%; /* Matches the horizontal line width */
+	max-width: 100%; /* Ensures responsiveness */
+	height: 200px; /* Adjust if needed */
 	border: none;
 	border-radius: 5px;
 	display: block;
-	margin: 0 auto;
+	margin: 0 auto; /* Centers the map */
 }
 
-/* Footer Container */
 .footer-container {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	gap: 20px;
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
 }
-
-/* Footer Bottom Section */
 .footer-bottom {
-	background-color: #ebce89;
+	position: relative;
+	background-color: #ebce89; /* Matching 'Contact Us' section */
 	padding: 10px 0;
-	width: 100%;
-	text-align: center;
 }
 
 .footer-bottom hr {
-	width: 90%;
+	width: 90%; /* Shorter than full width */
 	border: none;
-	border-top: 2px solid #000;
-	margin: 10px auto;
+	border-top: 2px solid #000; /* Black horizontal line */
+	margin: 10px auto; /* Centers the line */
 }
 
 .footer-bottom p {
+	position: absolute;
+	left: 5%;
+	bottom: -2px; /* Moves text 2px below the line */
 	font-size: 0.9rem;
 	font-weight: bold;
-	color: #000;
+	color: #000; /* Black text for contrast */
 }
 
 /* Footer Sections */
 .footer-section {
 	flex: 1;
-	min-width: 250px;
+	min-width: 200px;
 	text-align: left;
 }
 
-/* Section Headings */
 .footer-section h3 {
 	font-size: 1.5rem;
 	margin-bottom: 10px;
 	text-decoration: underline;
 }
 
-/* Section Content */
+/* Phone Numbers & Address */
 .footer-section p {
 	font-size: 1rem;
 	margin: 5px 0;
@@ -92,9 +84,8 @@
 }
 
 .contact-icon {
-	font-size: 1.5rem;
+	font-size: 1.5rem; /* Increase icon size if needed */
 }
-
 .contact-item a {
 	text-decoration: none;
 }
@@ -122,49 +113,17 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
 	.footer-container {
 		flex-direction: column;
-		align-items: center;
 		text-align: center;
 	}
 
 	.footer-section {
-		width: 100%;
 		text-align: center;
 	}
 
 	.contact-item {
 		justify-content: center;
-	}
-
-	.full-width-map iframe {
-		height: 200px;
-	}
-}
-
-@media (max-width: 600px) {
-	.footer {
-		padding: 20px 10px;
-	}
-
-	.footer-title {
-		font-size: 1.8rem;
-	}
-
-	.footer-section h3 {
-		font-size: 1.3rem;
-	}
-
-	.footer-section p {
-		font-size: 0.9rem;
-	}
-
-	.contact-icon {
-		font-size: 1.2rem;
-	}
-
-	.full-width-map iframe {
-		height: 180px;
 	}
 }

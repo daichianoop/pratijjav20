@@ -9,11 +9,11 @@ const HeaderFirstPage: React.FC = () => {
 		<div className={"fakebody bg-no-repeat bg-fixed bg-contain"}>
 			<div className="container">
 				<div className="title">
-					20<sup>th</sup> Edition Of
+					20<sup>TH</sup> EDITION OF
 				</div>
 				<div className="one-of">One Of</div>
 				<div className="debate-text">
-					The Largest Asian Parliamentary Debate <br/> 2025
+					THE LARGEST ASIAN PARLIAMENTARY DEBATE <br/> 2025
 				</div>
 				<div className="image">
 					<Image

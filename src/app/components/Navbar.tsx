@@ -34,8 +34,7 @@ const Navbar = () => {
 			{/* Fixed Navbar */}
 			<MobileNav isOpen={isOpen} toggleNavbar={toggleNavbar} />
 			<nav
-				className={`fixed top-0 left-0 right-0 z-50 w-full h-[70px] md:h-[80px] ${
-					showBackground ? "backdrop-blur-md bg-[#112b22]/80" : "bg-[#112b22]"
+				className={`fixed top-0 left-0 right-0 z-50 w-full h-[70px] md:h-[80px]]"
 				} flex items-center transition-all duration-300`}>
 				<div className="flex max-w-[1300px] mx-auto justify-between w-full px-6 lg:px-20 py-2 items-center text-white">
 					{/* Left Side Logo */}

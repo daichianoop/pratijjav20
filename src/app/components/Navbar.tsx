@@ -2,7 +2,7 @@
 
 "use client";
 import { usePathname } from "next/navigation";
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PratijjaDropdown from "./PratijjaDropdown";
@@ -19,14 +19,6 @@ const Navbar = () => {
 	};
 
 	// Handle Navbar background change on scroll
-	useEffect(() => {
-		const handleScroll = () => {
-			setShowBackground(window.scrollY >= 10);
-		};
-
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
 
 	return (
 		<>

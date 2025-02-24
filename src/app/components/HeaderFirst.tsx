@@ -19,7 +19,7 @@ const HeaderFirstPage: React.FC = () => {
 					<Image
 						src="/image.webp"
 						alt="Event"
-						width={500} // Set appropriate width
+						width={400} // Set appropriate width
 						height={300} // Set appropriate height
 						priority 
 					/>

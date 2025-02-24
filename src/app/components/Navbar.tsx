@@ -12,7 +12,6 @@ import { IoClose, IoMenu } from "react-icons/io5"; // Icons for mobile menu
 const Navbar = () => {
 	const pathname = usePathname();
 	const [isOpen, setIsOpen] = useState(false);
-	const [showBackground, setShowBackground] = useState(false);
 
 	// Toggle Navbar visibility on mobile
 	const toggleNavbar = () => {

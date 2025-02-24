@@ -1,30 +1,41 @@
+/** @format */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body {
+	flex-direction: column;
+}
+html,
+body {
+	overflow-x: hidden;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
 
 .gradient-text {
-  @apply bg-gradient-to-r from-[#7F654A] via-[#EBCE89] to-[#7F654A] bg-clip-text text-transparent;
+	@apply bg-gradient-to-r from-[#7F654A] via-[#EBCE89] to-[#7F654A] bg-clip-text text-transparent;
 }
 
 .overflow-scroll::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
 .alegreya-unique {
-    font-family: "Alegreya", serif;
-    font-weight: 400; /* You can change this to 700 for bold */
-    font-style: normal;
+	font-family: "Alegreya", serif;
+	font-weight: 400; /* You can change this to 700 for bold */
+	font-style: normal;
 }
 
-
 @font-face {
-    font-family: 'BuiltTilting';
-    src: url('/src/app/components/fonts/bt.otf');
-    font-weight: bold; 
-    font-style: normal; 
+	font-family: "BuiltTilting";
+	src: url("/src/app/components/fonts/bt.otf");
+	font-weight: bold;
+	font-style: normal;
 }
 
 /* Additional styles using BuiltTilting */
 .built-tilting {
-    font-family: 'BuiltTilting', monospace;
+	font-family: "BuiltTilting", monospace;
 }

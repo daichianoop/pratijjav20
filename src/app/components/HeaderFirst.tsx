@@ -21,7 +21,7 @@ const HeaderFirstPage: React.FC = () => {
 						alt="Event"
 						width={500} // Set appropriate width
 						height={300} // Set appropriate height
-						priority // Loads the image faster for better performance
+						priority 
 					/>
 				</div>
 			</div>

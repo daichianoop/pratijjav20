@@ -2,7 +2,7 @@
 
 "use client";
 import { usePathname } from "next/navigation";
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PratijjaDropdown from "./PratijjaDropdown";
@@ -25,7 +25,7 @@ const Navbar = () => {
 			{/* Fixed Navbar */}
 			<MobileNav isOpen={isOpen} toggleNavbar={toggleNavbar} />
 			<nav
-				className={`fixed top-0 left-0 right-0 z-50 w-full h-[70px] md:h-[80px]]"
+				className={`absolute top-0 left-0 right-0 z-50 w-full h-[70px] md:h-[80px]]"
 				} flex items-center transition-all duration-300`}>
 				<div className="flex max-w-[1300px] mx-auto justify-between w-full px-6 lg:px-20 py-2 items-center text-white">
 					{/* Left Side Logo */}
@@ -54,15 +54,19 @@ const Navbar = () => {
 					<div className="hidden sm:flex items-center text-lg space-x-6">
 						<Link
 							href="/"
-							className={`hover:text-[#ebce89] transition-all duration-200 ${
-								pathname === "/" && "text-[#ebce89]"
+							className={`relative transition-all duration-200 ${
+								pathname === "/"
+									? "bg-gradient-to-r from-[#7F654A] via-[#EBCE89] to-[#7F654A] text-transparent bg-clip-text"
+									: "hover:bg-gradient-to-r hover:from-[#7F654A] hover:via-[#EBCE89] hover:to-[#7F654A] hover:text-transparent hover:bg-clip-text"
 							}`}>
 							Home
 						</Link>
 						<Link
 							href="/about"
-							className={`hover:text-[#ebce89] transition-all duration-200 ${
-								pathname === "/about" && "text-[#ebce89]"
+							className={`relative transition-all duration-200 ${
+								pathname === "/about"
+									? "bg-gradient-to-r from-[#7F654A] via-[#EBCE89] to-[#7F654A] text-transparent bg-clip-text"
+									: "hover:bg-gradient-to-r hover:from-[#7F654A] hover:via-[#EBCE89] hover:to-[#7F654A] hover:text-transparent hover:bg-clip-text"
 							}`}>
 							About
 						</Link>
@@ -86,8 +90,6 @@ const Navbar = () => {
 					</button>
 				</div>
 			</nav>
-
-			{/* Push Down Content to Prevent Overlap */}
 		</>
 	);
 };

@@ -15,7 +15,7 @@ const FlipCard: React.FC = () => {
 		<section
 			className="flipCards px-6 md:px-12 lg:px-20 py-10"
 			style={{ backgroundColor: "#EBCE89" }}>
-			<div className="flex flex-wrap justify-center gap-8">
+			<div className="flex flex-col md:flex-row flex-wrap justify-center gap-10 md:gap-8">
 				{[
 					{ src: "/poster-21.png", title: "INCEPTION" },
 					{ src: "/poster-22.png", title: "DISCLOSURE" },
@@ -25,7 +25,7 @@ const FlipCard: React.FC = () => {
 						key={index}
 						className="flip-card w-full sm:w-[340px] md:w-[360px] lg:w-[390px]">
 						<div className="flip-card-inner">
-							<div className="flip-card-front">
+							<div className="flip-card-front bg-[url('/flipcardbg.png')] bg-cover bg-center">
 								<Image
 									src={card.src}
 									width={390}

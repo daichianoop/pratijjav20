@@ -1,7 +1,6 @@
 /* Footer Styles */
 .footer {
     background-color: #EBCE89; /* Updated from black to #EBCE89 */
-    color: #fff;
     padding: 30px 20px;
     text-align: center;
 }
@@ -83,10 +82,8 @@
 
 .contact-icon {
     font-size: 1.5rem; /* Increase icon size if needed */
-    color: #fff;
 }
 .contact-item a {
-    color: #fff;
     text-decoration: none;
 }
 
@@ -105,7 +102,6 @@
 }
 
 .footer-section ul li a {
-    color: #fff;
     text-decoration: none;
 }
 

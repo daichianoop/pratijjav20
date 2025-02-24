@@ -25,7 +25,7 @@ const HeaderFirstPage: React.FC = () => {
 					/>
 				</div>
 			</div>
-			<div className={"relative right-0"}>
+			<div className={"relative -right-10 -bottom-20"}>
 				<CountdownTimer/>
 			</div>
 		</div>

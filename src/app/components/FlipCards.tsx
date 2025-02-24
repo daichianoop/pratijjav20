@@ -13,9 +13,9 @@ const yeseva = Yeseva_One({
 const FlipCard: React.FC = () => {
 	return (
 		<section
-			className="flipCards px-6 md:px-12 lg:px-20 py-10"
+			className="flipCards px-6 md:px-12 sm:px-10 mx-3"
 			style={{ backgroundColor: "#EBCE89" }}>
-			<div className="flex flex-col md:flex-row flex-wrap justify-center gap-10 md:gap-8">
+			<div className="flex flex-col md:flex-row flex-wrap justify-center gap-10 md:gap-8 sm:gap-20">
 				{[
 					{ src: "/poster-21.png", title: "INCEPTION" },
 					{ src: "/poster-22.png", title: "DISCLOSURE" },

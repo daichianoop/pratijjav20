@@ -12,20 +12,22 @@ const HeaderFirstPage: React.FC = () => {
 				20<sup>TH</sup>&nbsp;EDITION OF
 				</div>
 				<div className="one-of">One Of</div>
+				<br />
 				<div className="debate-text">
-					THE LARGEST ASIAN PARLIAMENTARY DEBATE <br/> 2025
+					THE LARGEST ASIAN PARLIAMENTARY DEBATE IN INDIA
 				</div>
 				<div className="image">
-					<Image
+					<Image 
+					className="img"
 						src="/image.webp"
 						alt="Event"
-						width={400} // Set appropriate width
+						width={300} // Set appropriate width
 						height={300} // Set appropriate height
 						priority 
 					/>
 				</div>
 			</div>
-			<div className={"relative -right-10 -bottom-20"}>
+			<div className={"relative -right-10 -bottom-20 count"}>
 				<CountdownTimer/>
 			</div>
 		</div>

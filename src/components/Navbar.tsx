@@ -25,7 +25,7 @@ const Navbar = () => {
 				className={`absolute top-0 left-0 right-0 z-50 w-full h-[70px] md:h-[80px] flex items-center transition-all duration-300`}>
 				<div className="flex max-w-[1300px] mx-auto justify-between w-full px-6 lg:px-20 py-2 items-center text-white">
 					{/* Left Side Logo */}
-					<div className="hidden sm:flex space-x-4">
+					<div className="hidden sm:flex space-x-2 ml-[-50px]">
 						<Image src="/kiitLogo.png" alt="kiit logo" height={50} width={50} />
 						<Image src="/kslogo.png" alt="ksac logo" height={50} width={50} />
 					</div>
@@ -66,9 +66,7 @@ const Navbar = () => {
 							About
 						</span>
 						<div className="relative group">
-							<span
-								className="cursor-pointer rounded-full p-3 hover:text-[#ebce89] transition-all duration-200"
-								onClick={() => (window.location.href = "/register")}>
+							<span className="cursor-pointer rounded-full p-3 hover:text-[#ebce89] transition-all duration-200">
 								Register
 							</span>
 							<PratijjaDropdown />

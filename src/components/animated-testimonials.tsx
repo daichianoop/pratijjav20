@@ -62,7 +62,7 @@ export const AnimatedTestimonials = ({
 				"Your words hold power. Step up, speak confidently, and showcase your skills. Whether it's logic, persuasion, or eloquence, each argument is a step closer to triumph. Every debate brings you closer to claiming the crown.",
 			name: "Speak and Triumph",
 			designation: "",
-			src: "https://ik.imagekit.io/chaitanya/IMG_6980.png?updatedAt=1740466878492",
+			src: "https://ik.imagekit.io/chaitanya/WhatsApp%20Image%202025-01-19%20at%2020.45.14_d9a48285.png?updatedAt=1740466696892",
 		},
 		{
 			quote:

@@ -1,8 +1,8 @@
 /** @format */
 
-import FlipCard from "@/app/components/FlipCards";
-import HeaderFirstPage from "./components/HeaderFirst";
-import { AnimatedTestimonialsDemo } from "@/app/components/animated-testimonials-demo";
+import FlipCard from "@/components/FlipCards";
+import HeaderFirstPage from "@/components/HeaderFirst";
+import { AnimatedTestimonialsDemo } from "@/components/animated-testimonials-demo";
 
 export default function Home() {
 	return (

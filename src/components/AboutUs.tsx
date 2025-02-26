@@ -15,7 +15,7 @@ const barlow_light = Barlow({
 });
 const AboutUs = () => {
 	return (
-		<div className="min-h-screen bg-[#002027]">
+		<div className="min-h-screen ">
 			{/* Hero Section with Gradient Overlay */}
 			<div className="bg-[#002027]">
 				<section className="relative bg-[#002027]">
@@ -63,7 +63,7 @@ const AboutUs = () => {
 							<p className="gradient-text">
 								Pratijja is the flagship Asian Parliamentary Debate of KIIT
 								University hosted by its esteemed literary and debating society,
-								Kiitdee.
+								Kroni.
 							</p>
 							<p className="gradient-text">
 								One of India&apos;s premier debating tournaments, Pratijja

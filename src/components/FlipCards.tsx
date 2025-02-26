@@ -50,10 +50,10 @@ const FlipCard: React.FC = () => {
 							</div>
 							<div className="px-6 py-8 flip-card-back bg-[url('/flipcardbg.png')] bg-cover bg-center h-full">
 								<p
-									className={`title1234 mb-4 text-3xl md:text-4xl ${yeseva.className}`}>
+									className={`title1234 mb-4 text-3xl md:text-2xl ${yeseva.className}`}>
 									{card.title}
 								</p>
-								<p className={`text-base md:text-lg ${yeseva.className}`}>
+								<p className={`text-base  ${yeseva.className}`}>
 									{card.description}
 								</p>
 							</div>

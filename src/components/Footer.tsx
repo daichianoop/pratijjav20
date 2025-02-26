@@ -2,7 +2,6 @@
 
 import React from "react";
 import "./styles/footer.css";
-import Image from "next/image";
 import { GrMail } from "react-icons/gr"; // Mail icon
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"; // Social media icons
 
@@ -15,14 +14,14 @@ const Footer: React.FC = () => {
 				<hr />
 			</div>
 			{/* Contact Us Image */}
-			<div className={"flex items-center justify-center"}>
-				<Image
-					src="/Contact Us.png"
-					width={400}
-					height={400}
-					alt="Contact Us"
-					className="footer-image mt-7"
-				/>
+			<div>
+				<span className="text-7xl" style={{ color: "#112B22" }}>
+					Contact
+				</span>
+				{"  "}
+				<span className="text-7xl" style={{ color: "#2E1413" }}>
+					Us
+				</span>
 			</div>
 			<br />
 
@@ -41,7 +40,7 @@ const Footer: React.FC = () => {
 			<div className="footer-container px-20">
 				<div className="footer-section text-center">
 					<h3 className={"uppercase"}>Phone Numbers</h3>
-					<p>John Doe: +91 98765 43210</p>
+					<p>Parth Sachdeva: +91 98765 43210</p>
 					<p>Jane Smith: +91 87654 32109</p>
 					<p>Mike Johnson: +91 76543 21098</p>
 				</div>
@@ -57,13 +56,13 @@ const Footer: React.FC = () => {
 				<div className="footer-section text-center">
 					<h3 className={"uppercase"}>Social Media</h3>
 					<div className={"flex-row items-center justify-center"}>
-						<div className="contact-item mt-1 flex items-center justify-center">
+						<div className="contact-item mt-1 flex items-start justify-center">
 							<GrMail className="contact-icon mr-2" aria-label="Email" />
 							<a
-								href="mailto:kronicle@kiit.ac.in"
+								href="mailto:								kronicleofficial@gmail.com"
 								target="_blank"
 								rel="noopener noreferrer">
-								kronicle@kiit.ac.in
+								kronicleofficial@gmail.com
 							</a>
 						</div>
 						<div className="contact-item mt-1 flex items-center justify-center">
@@ -91,10 +90,10 @@ const Footer: React.FC = () => {
 								aria-label="Instagram"
 							/>
 							<a
-								href="https://instagram.com/kroniclekiit"
+								href="https://instagram.com/kronicle_official"
 								target="_blank"
 								rel="noopener noreferrer">
-								/kroniclekiit
+								/kronicle_official
 							</a>
 						</div>
 					</div>

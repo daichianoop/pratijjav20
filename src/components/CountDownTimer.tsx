@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import "@/app/components/styles/countDownTimer.css" // Import the CSS file
+import "@/components/styles/countDownTimer.css" // Import the CSS file
 
 interface TimeLeft {
     days: number;

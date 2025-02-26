@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import "./styles/headerFirstPage.css";
-import CountdownTimer from "@/app/components/CountDownTimer";
+import CountdownTimer from "@/components/CountDownTimer";
 
 const HeaderFirstPage: React.FC = () => {
 	return (

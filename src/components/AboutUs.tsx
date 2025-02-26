@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Barlow } from "next/font/google";
 import FlipCard from "./AboutPageFlipCards";
-import "../globals.css"; // ensure this path matches your project structure
+import "@/app/globals.css"; // ensure this path matches your project structure
 
 const barlow = Barlow({
 	weight: "900", // specify desired weight

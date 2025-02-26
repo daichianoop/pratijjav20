@@ -8,6 +8,7 @@
 	background-color: #ebce89; /* Updated from black to #EBCE89 */
 	padding: 30px 20px;
 	text-align: center;
+	width:100vw;
 }
 
 .footer-title {
@@ -79,20 +80,21 @@
 .contact-item {
 	display: flex;
 	align-items: center;
+	justify-content: start;
 	gap: 10px;
 	margin-bottom: 10px;
+	text-align: left;
 }
 
 .contact-icon {
 	font-size: 1.5rem; /* Increase icon size if needed */
+	text-align: left;
 }
 .contact-item a {
 	text-decoration: none;
+	text-align: left;
 }
 
-.contact-item a:hover {
-	text-decoration: underline;
-}
 
 /* Quick Links */
 .footer-section ul {

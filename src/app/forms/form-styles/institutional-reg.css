@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-	background-image: url("/formbg.png");
+	background-color: #002027;
 	background-position: center;
 	background-size: cover;
 	padding: 20px 40px;

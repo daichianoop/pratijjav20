@@ -13,13 +13,28 @@ const yeseva = Yeseva_One({
 const FlipCard: React.FC = () => {
 	return (
 		<section
-			className="flipCards px-6 md:px-12 sm:px-10 mx-3"
-			style={{ backgroundColor: "#EBCE89" }}>
+			className="flipCards md:px-12 sm:px-10 mx-3 "
+			style={{ backgroundColor: "#EBCE89 ", margin: "0px" }}>
 			<div className="flex flex-col md:flex-row flex-wrap justify-center gap-10 md:gap-8 sm:gap-20">
 				{[
-					{ src: "/poster-21.png", title: "INCEPTION" },
-					{ src: "/poster-22.png", title: "DISCLOSURE" },
-					{ src: "/poster-23.png", title: "EPILOGUE" },
+					{
+						src: "/poster-21.png",
+						title: "INCEPTION",
+						description:
+							"The stage is set, the podiums stand tall, and the halls of KIIT resonate with the murmurs of debaters sharpening their arguments. Like the first brushstrokes on a grand canvas, this marks the genesis of three days of relentless discourse and intellectual debates. Hold on tight for the Opening Ceremony, which ignites the flame, calls for minds eager to clash and converge in pursuit of truth, which will be followed by opening rounds.",
+					},
+					{
+						src: "/poster-22.png",
+						title: "DISCOURSE",
+						description:
+							"As Day Two dawns, the battle rages on. This is where the competition thickens—each argument sharper, each rebuttal fiercer. With each passing round, the motions push the limits of reason, demanding wit and unshakable conviction. Then the real twist unfolds—the Break Announcement. The tension is electric, hearts race as names are called, and with every cheer and sigh, the battlefield narrows - and for those who remain, the war is far from over.",
+					},
+					{
+						src: "/poster-23.png",
+						title: "EPILOGUE",
+						description:
+							"Every story must find its conclusion, and the final strokes are painted on this canvas of intellect and perseverance. The grand finale looms as the finest debaters stand on the brink of victory, their words shaping Pratijja’s legacy. With the final motion unveiled and the last arguments made, the verdict is cast, the winners crowned, and a journey of knowledge, resilience, and camaraderie reaches its rightful end.",
+					},
 				].map((card, index) => (
 					<div
 						key={index}
@@ -39,8 +54,7 @@ const FlipCard: React.FC = () => {
 									{card.title}
 								</p>
 								<p className={`text-base md:text-lg ${yeseva.className}`}>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-									do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									{card.description}
 								</p>
 							</div>
 						</div>

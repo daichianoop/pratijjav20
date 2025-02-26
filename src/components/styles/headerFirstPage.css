@@ -6,6 +6,7 @@
 
 .fakebody {
 	color: #ebce89;
+	background-color: #002027;
 	height: fit-content;
 }
 
@@ -68,7 +69,7 @@
 	width: 40%;
 	border-radius: 10px;
 }
-.count{
+.count {
 	margin-top: 100px;
 	display: flex;
 	justify-content: center;

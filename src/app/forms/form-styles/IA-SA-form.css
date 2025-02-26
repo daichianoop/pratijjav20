@@ -6,17 +6,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
-body {
-	font-family: Arial, sans-serif;
-	min-height: 100vh;
-	margin: 0;
-}
-
 .body-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	width: 100vw;
 }
 
 .container {

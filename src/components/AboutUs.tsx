@@ -41,7 +41,7 @@ const AboutUs = () => {
 				</section>
 
 				{/* Version Section with Background Text */}
-				<section className="relative container mx-auto px-4 py-16">
+				<section className="relative container mx-auto px-4 py-16 bg-[#002027]	">
 					<h2
 						className="text-3xl sm:text-6xl font-bold bg-gradient-to-r from-[#7F654A] via-[#EBCE89] to-[#7F654A] bg-clip-text text-transparent"
 						style={{ fontFamily: "Impact, sans-serif" }}>
@@ -80,7 +80,7 @@ const AboutUs = () => {
 					</div>
 
 					{/* "Since 2006" Section with Text Left and Image Right */}
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative mt-16 z-10">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative mt-16 z-10 ">
 						<div
 							className="text-[15vw] md:text-[120px] text-amber-100 font-bold leading-none"
 							style={{ fontFamily: "Impact, sans-serif" }}>
@@ -100,7 +100,7 @@ const AboutUs = () => {
 					</div>
 				</section>
 
-				<div className="relative">
+				<div className="relative bg-[#002027]">
 					<div className="w-full h-32 mt-40 bg-[url('/Component9.png')] bg-center bg-cover bg-no-repeat z-0"></div>
 					<p
 						className="absolute inset-0 flex items-center justify-center text-8xl text-[#7F654A] z-10"
@@ -110,7 +110,7 @@ const AboutUs = () => {
 				</div>
 
 				{/* KIIT & KISS Section */}
-				<section className="container mx-auto px-4 py-16">
+				<section className="container mx-auto px-4 py-16 bg-[#002027]">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-16">
 						{/* KIIT Section */}
 						<div>
@@ -288,7 +288,7 @@ const AboutUs = () => {
 				</section>
 
 				{/* Founder Section */}
-				<section className="container mx-auto px-4 py-16">
+				<section className="container mx-auto px-4 py-16 bg-[#002027]">
 					<h2
 						className="text-[8vw] md:text-[50px] text-center w-full md:w-1/2 mx-auto font-bold mb-8 bg-gradient-to-r from-[#7F654A] via-[#EBCE89] to-[#7F654A] bg-clip-text text-transparent"
 						style={{ fontFamily: "Impact, sans-serif" }}>

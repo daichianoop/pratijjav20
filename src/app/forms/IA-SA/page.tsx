@@ -71,12 +71,14 @@ const IAform: React.FC = () => {
 	};
 
 	return (
-		<div className="body-container">
+		<div className="body-container w-screen">
 			<div className="container bg-fixed">
 				<h1>IA/SA APPLICATION</h1>
 				<h2 className="subheading uppercase">Pratijja V20 IA/SA</h2>
 
-				<form  className="flex flex-col justify-center items-center" onSubmit={handleSubmit}>
+				<form
+					className="flex flex-col justify-center items-center"
+					onSubmit={handleSubmit}>
 					<input
 						type="text"
 						name="name"

@@ -55,35 +55,35 @@ export const AnimatedTestimonials = ({
 				"A test of intellect and strategy where only the sharpest minds can prevail. Engage in fierce discussions, challenge ideas, and prove your mental agility to claim victory in this ultimate battle of wits.",
 			name: "War of Wits",
 			designation: "",
-			src: "/https://ik.imagekit.io/chaitanya/IMG_6980.png?updatedAt=1740466878492",
+			src: "https://ik.imagekit.io/chaitanya/WhatsApp%20Image%202025-02-26%20at%2002.24.11_9bb558dd.jpg?updatedAt=1740581185909",
 		},
 		{
 			quote:
 				"Your words hold power. Step up, speak confidently, and showcase your skills. Whether it's logic, persuasion, or eloquence, each argument is a step closer to triumph. Every debate brings you closer to claiming the crown.",
 			name: "Speak and Triumph",
 			designation: "",
-			src: "https://ik.imagekit.io/chaitanya/WhatsApp%20Image%202025-01-19%20at%2020.45.14_d9a48285.png?updatedAt=1740466696892",
+			src: "https://ik.imagekit.io/chaitanya/WhatsApp%20Image%202025-02-26%20at%2002.24.12_78370e5a.jpg?updatedAt=1740581185803",
 		},
 		{
 			quote:
 				"This is more than just a competition—it's a pursuit of honor and recognition. Compete against the finest minds, debate with passion, and earn your place in history as the ultimate champion. Victory brings unparalleled glory.",
 			name: "Debate for Glory",
 			designation: "",
-			src: "",
+			src: "https://ik.imagekit.io/chaitanya/WhatsApp%20Image%202025-02-26%20at%2002.24.11_65a279b9.jpg?updatedAt=1740581185826",
 		},
 		{
 			quote:
 				"It's not just about winning; it's about the connections you make and the fun you have along the way. Pratijja v20 is the perfect platform for you to forge lasting friendships and experience the thrill of competition.",
 			name: "Debate. Connect. Conquer",
 			designation: "",
-			src: "",
+			src: "https://ik.imagekit.io/chaitanya/WhatsApp%20Image%202025-02-26%20at%2002.24.13_ab02eced.jpg?updatedAt=1740581185815",
 		},
 		{
 			quote:
 				"Caution: May cause excessive brain activity! To ace this marathon of minds, you'll have to push your argumentation and impromptu speaking skills to the limit. Are you prepared for this intellectual endurance test?",
 			name: "The Mind’s Marathon",
 			designation: "",
-			src: "",
+			src: "https://ik.imagekit.io/chaitanya/IMG_6980.png?updatedAt=1740581515239",
 		},
 	];
 
@@ -100,7 +100,7 @@ export const AnimatedTestimonials = ({
 						exit={{ y: -20, opacity: 0 }}
 						transition={{ duration: 0.2, ease: "easeInOut" }}>
 						<h3
-							className="text-3xl uppercase font-bold"
+							className="text-6xl uppercase font-bold"
 							style={{ letterSpacing: "0px" }}>
 							<span style={{ color: "#112B22" }}>
 								{updatedTestimonials[active].name.split(" ")[0]}
@@ -109,7 +109,6 @@ export const AnimatedTestimonials = ({
 								{updatedTestimonials[active].name.split(" ").slice(1).join(" ")}
 							</span>
 						</h3>
-						<br />
 						<motion.p
 							className={`text-xl font-bold ${alegreya.className}`}
 							style={{ color: "#582E18" }}>

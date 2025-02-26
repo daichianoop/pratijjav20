@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Alegreya } from 'next/font/google';
-import '../globals.css'
+import '@/app/globals.css'
 
 type Testimonial = {
   quote: string;

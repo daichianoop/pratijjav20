@@ -4,7 +4,6 @@
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import PratijjaDropdown from "./PratijjaDropdown";
 import MobileNav from "./MobileNav";
 import { IoClose, IoMenu } from "react-icons/io5"; // Icons for mobile menu

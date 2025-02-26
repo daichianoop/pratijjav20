@@ -76,7 +76,7 @@ const IAform: React.FC = () => {
 				<h1>IA/SA APPLICATION</h1>
 				<h2 className="subheading uppercase">Pratijja V20 IA/SA</h2>
 
-				<form onSubmit={handleSubmit}>
+				<form  className="flex flex-col justify-center items-center" onSubmit={handleSubmit}>
 					<input
 						type="text"
 						name="name"

@@ -2,7 +2,6 @@
 
 import React from "react";
 import "./styles/footer.css";
-import Image from "next/image";
 import { GrMail } from "react-icons/gr"; // Mail icon
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"; // Social media icons
 
@@ -15,9 +14,14 @@ const Footer: React.FC = () => {
 				<hr />
 			</div>
 			{/* Contact Us Image */}
-			<div >
-			<span className="text-7xl" style={{color: "#112B22"}}>Contact</span>{"  "}
-			<span className="text-7xl" style={{color: "#2E1413"}}>Us</span>
+			<div>
+				<span className="text-7xl" style={{ color: "#112B22" }}>
+					Contact
+				</span>
+				{"  "}
+				<span className="text-7xl" style={{ color: "#2E1413" }}>
+					Us
+				</span>
 			</div>
 			<br />
 

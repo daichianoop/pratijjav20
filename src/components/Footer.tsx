@@ -3,7 +3,7 @@
 import React from "react";
 import "./styles/footer.css";
 import { GrMail } from "react-icons/gr"; // Mail icon
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"; // Social media icons
+import { FaFacebook, FaInstagram } from "react-icons/fa"; // Social media icons
 
 const Footer: React.FC = () => {
 	return (

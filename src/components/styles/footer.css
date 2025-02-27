@@ -6,9 +6,9 @@
 
 .footer {
 	background-color: #ebce89; /* Updated from black to #EBCE89 */
-	padding: 30px 20px;
+	padding: 20px 20px;
 	text-align: center;
-	width:100vw;
+	width: 100vw;
 }
 
 .footer-title {
@@ -94,7 +94,6 @@
 	text-decoration: none;
 	text-align: left;
 }
-
 
 /* Quick Links */
 .footer-section ul {

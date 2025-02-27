@@ -37,26 +37,25 @@ const Footer: React.FC = () => {
 				<br /> <br />
 			</div>
 
-			<div className="footer-container px-20">
+			<div className="footer-container ">
 				<div className="footer-section text-center">
 					<h3 className={"uppercase"}>Phone Numbers</h3>
 					<p>Parth Sachdeva: +91 98765 43210</p>
-					<p>Jane Smith: +91 87654 32109</p>
-					<p>Mike Johnson: +91 76543 21098</p>
+					<p>Aadit Baxi: +91 87654 32109</p>
 				</div>
 
 				<div className="footer-section text-center">
 					<h3 className={"uppercase"}>Address</h3>
-					<p>Campus 13, KSAC</p>
+					<p>Campus 13, KSAC </p>
 					<p>KIIT UNIVERSITY</p>
 					<p>Bhubaneswar, Odisha</p>
 					<p>PINCODE - 751024</p>
 				</div>
 
-				<div className="footer-section text-center">
+				<div className="footer-section text-left">
 					<h3 className={"uppercase"}>Social Media</h3>
-					<div className={"flex-row items-center justify-center"}>
-						<div className="contact-item mt-1 flex items-start justify-center">
+					<div className={"flex-row items-start justify-start"}>
+						<div className="contact-item mt-1 flex items-start justify-start">
 							<GrMail className="contact-icon mr-2" aria-label="Email" />
 							<a
 								href="mailto:								kronicleofficial@gmail.com"
@@ -65,13 +64,13 @@ const Footer: React.FC = () => {
 								kronicleofficial@gmail.com
 							</a>
 						</div>
-						<div className="contact-item mt-1 flex items-center justify-center">
-							<FaLinkedin className="contact-icon mr-2" aria-label="LinkedIn" />
+						<div className="contact-item mt-1 flex items-start justify-start">
+							<GrMail className="contact-icon mr-2" aria-label="Email" />
 							<a
-								href="https://linkedin.com/in/kronicle_official"
+								href="mailto:pratijja.apd@kiit.ac.in"
 								target="_blank"
 								rel="noopener noreferrer">
-								/kronicle_official
+								pratijja.apd@kiit.ac.in
 							</a>
 						</div>
 						<div className="contact-item mt-1 flex items-center justify-center">

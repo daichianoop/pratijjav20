@@ -52,7 +52,7 @@ const AboutUs = () => {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 mt-12">
 						<div>
 							<Image
-								src="https://ik.imagekit.io/chaitanya/IMG_3085.png?updatedAt=1740067768461"
+								src="https://ik.imagekit.io/chaitanya/WhatsApp%20Image%202025-02-26%20at%2021.37.27_f61575a7.jpg?updatedAt=1740655232337"
 								alt="Debate"
 								className="rounded-lg p-2"
 								width={400}
@@ -63,7 +63,7 @@ const AboutUs = () => {
 							<p className="gradient-text">
 								Pratijja is the flagship Asian Parliamentary Debate of KIIT
 								University hosted by its esteemed literary and debating society,
-								Kroni.
+								Kronicle.
 							</p>
 							<p className="gradient-text">
 								One of India&apos;s premier debating tournaments, Pratijja

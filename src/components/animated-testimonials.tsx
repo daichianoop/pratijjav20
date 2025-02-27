@@ -83,7 +83,7 @@ export const AnimatedTestimonials = ({
 				"Caution: May cause excessive brain activity! To ace this marathon of minds, you'll have to push your argumentation and impromptu speaking skills to the limit. Are you prepared for this intellectual endurance test?",
 			name: "The Mind’s Marathon",
 			designation: "",
-			src: "https://ik.imagekit.io/chaitanya/IMG_6980.png?updatedAt=1740581515239",
+			src: "https://ik.imagekit.io/chaitanya/WhatsApp%20Image%202025-02-26%20at%2021.35.31_7b9c370b.jpg?updatedAt=1740655232332",
 		},
 	];
 

@@ -7,19 +7,12 @@ import { AnimatedTestimonialsDemo } from "@/components/animated-testimonials-dem
 export default function Home() {
 	return (
 		<>
-			<div className={"bg-[#002027] font-built-titling"}>
-				<div
-					className={
-						"hero-part bg-[#002027] bg-opacity-0 bg-cover bg-fixed pt-20"
-					}>
+			<div className={"font-built-titling"}>
+				<div className="fakebody w-full h-screen text-[#ebce89]">
 					<HeaderFirstPage />
 				</div>
-				<div
-					className={
-						"bg-[#EBCE89] uppercase text-[2.6rem] text-[#2e1413] font-built-titling font-extrabold mt-5 text-center"
-					}>
-					Claim Prizes Worth &#8377; 77K! March 21-23, 2025
-				</div>
+				<div className="text-4xl bg-[#ebce89] font-bold text-center p-5 uppercase text-[#002027]">Think Fast, Speak Smart, Win Big – <span className="text-[#582E18]">₹77K Awaits!</span></div>
+
 				<AnimatedTestimonialsDemo />
 				<FlipCard />
 			</div>

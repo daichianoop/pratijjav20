@@ -1,5 +1,5 @@
-/** @format */
 
+import Link from "next/link";
 import React from "react";
 import "./styles/footer.css";
 import { GrMail } from "react-icons/gr"; // Mail icon
@@ -102,10 +102,10 @@ const Footer: React.FC = () => {
 					<h3 className={"uppercase"}>Quick Links</h3>
 					<ul>
 						<li>
-							<a href="/about">About Us</a>
+							<Link href="/about">About Us</Link>
 						</li>
 						<li>
-							<a href="/register">Register</a>
+							<Link href="/">Home</Link>
 						</li>
 					</ul>
 				</div>

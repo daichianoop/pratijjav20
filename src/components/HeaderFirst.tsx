@@ -1,36 +1,18 @@
-/** @format */
 import React from "react";
-import Image from "next/image";
-import "./styles/headerFirstPage.css";
 import CountdownTimer from "@/components/CountDownTimer";
 
 const HeaderFirstPage: React.FC = () => {
 	return (
-		<div className={"fakebody bg-no-repeat bg-fixed bg-contain"}>
-			<div className="container">
-				<div className="title">
-				20<sup>TH</sup>&nbsp;EDITION OF
-				</div>
-				<div className="one-of">One Of</div>
-				<br />
-				<div className="debate-text">
-					THE LARGEST ASIAN PARLIAMENTARY DEBATE IN INDIA
-				</div>
-				<div className="image">
-					<Image 
-					className="img"
-						src="/image.webp"
-						alt="Event"
-						width={300} // Set appropriate width
-						height={300} // Set appropriate height
-						priority 
-					/>
-				</div>
-			</div>
-			<div className={"relative -right-10 -bottom-20 count"}>
-				<CountdownTimer/>
-			</div>
-		</div>
+		<div className={"fakebody bg-no-repeat bg-fixed bg-contain pt-7"}>  
+    <div className="text-4xl lg:text-6xl text-center built-tilting mt-3" style={{ fontFamily: "Impact, sans-serif" }}>  
+        20<sup>th</sup> EDITION  
+    </div>  
+    <div className="text-4xl lg:text-6xl text-center built-tilting mt-5" style={{ fontFamily: "Impact, sans-serif" }}>  
+        OF THE LARGEST ASIAN PARLIAMENTARY DEBATE <br/> IN INDIA  
+    </div>  
+    <div><CountdownTimer/></div>  
+    <div></div>  
+</div>  
 	);
 };
 

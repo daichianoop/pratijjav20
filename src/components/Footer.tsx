@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
 					<p>PINCODE - 751024</p>
 				</div>
 
-				<div className="footer-section text-left">
+				<div className="footer-section text-center">
 					<h3 className={"uppercase"}>Social Media</h3>
 					<div className={"flex-row items-start justify-start"}>
 						<div className="contact-item mt-1 flex items-start justify-start">

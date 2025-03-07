@@ -8,14 +8,8 @@ export default function Home() {
 	return (
 		<>
 			<div className={"font-built-titling"}>
-				<div className="fakebody bg-[url('/formbg.png')] bg-cover bg-center bg-no-repeat w-full min-h-screen text-[#ebce89] pt-20">
+				<div className="fakebody w-full h-screen text-[#ebce89]">
 					<HeaderFirstPage />
-				</div>
-				<div
-					className={
-						"bg-[#EBCE89] uppercase text-[2.6rem] text-[#2e1413] font-built-titling font-extrabold  text-center mt-0"
-					}>
-					Claim Prizes Worth &#8377; 77K! March 21-23, 2025
 				</div>
 				<AnimatedTestimonialsDemo />
 				<FlipCard />

@@ -82,7 +82,7 @@ export default function RootLayout({
 			</head>
 
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+				className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('/formbg.png')] bg-cover bg-center bg-no-repeat overflow-scroll h-screen`}>
 				<Navbar />
 				{children}
 				<Footer />

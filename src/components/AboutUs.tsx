@@ -15,13 +15,13 @@ const barlow_light = Barlow({
 });
 const AboutUs = () => {
 	return (
-		<div className="min-h-screen ">
+		<div className="min-h-screen -z-20">
 			{/* Hero Section with Gradient Overlay */}
 			<div className="bg-[#002027]">
-				<section className="relative bg-[#002027]">
+				<section className=" bg-[#EBCE89] ">
 					{/* Gradient Overlay */}
 					<div
-						className="absolute inset-0"
+						className=""
 						style={{ backgroundColor: "#EBCE89" }}></div>
 
 					<div className="relative container mx-auto py-16 px-4 text-center">
@@ -30,7 +30,7 @@ const AboutUs = () => {
 							style={{ fontFamily: "Impact, sans-serif" }}>
 							ABOUT US
 						</h1>
-						<p className="text-base sm:text-lg max-w-3xl mt-4 mx-auto text-teal-950">
+						<p className="text-base   sm:text-lg max-w-3xl mt-4 mx-auto text-teal-950">
 							KRONICLE, KIIT&apos;s official debating society, brings its
 							mission to reality once again, with its own APD competition—a
 							monument to our founder&apos;s intellect, argumentation, and

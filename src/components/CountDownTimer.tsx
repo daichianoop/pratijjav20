@@ -45,7 +45,7 @@ const CountdownTimer: React.FC = () => {
     }, []);
 
     return (
-        <div className={"absolute right-20 bottom-20"}>
+        <div className={""}>
             <div className="countdown-container">
                 <div className="year">2025</div>
                 <div className="timer-container">

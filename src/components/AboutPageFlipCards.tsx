@@ -26,7 +26,7 @@ const FlipCard: React.FC = () => {
 
 				{/* Card 2 */}
 				<div className="custom-card w-full sm:w-[300px] h-[400px] relative">
-					<div className="card-content p-4">
+					<div className="card-content p-2">
 						<Image
 							src="/poster-pratijja.png"
 							width={300}

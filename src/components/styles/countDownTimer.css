@@ -7,7 +7,7 @@
     justify-content: center;
     position: relative; /* Allows placement anywhere */
     width: 100%;
-    height: 70vh;
+    height: auto;
     color: #ebce89;
     font-family: "Oswald", sans-serif;
 }

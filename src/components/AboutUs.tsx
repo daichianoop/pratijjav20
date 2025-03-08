@@ -144,7 +144,7 @@ const AboutUs = () => {
 								holds an A++ grade from NAAC. It ranks within the 601-800
 								bracket in the Times Higher Education World University Ranking
 								2024, with its Computer Science Engineering program in the
-								global 301-400 range. Recognized as India's top private
+								global 301-400 range. Recognized as India&apos;s top private
 								university for innovation by AICTE, KIIT continues to excel in
 								research, academics, and industry engagement.
 							</p>
@@ -177,11 +177,11 @@ const AboutUs = () => {
 								barriers and preparing students for the future. With a growing
 								alumni network making strides in public sectors, the institute
 								continues to uplift marginalized communities through education.
-								Guided by its vision—"A world where all children and youth can
-								learn free of cost, lead, and grow without fear to reach their
-								full potential"—KISS stands as a model of sustainable social
-								development, transforming lives and breaking intergenerational
-								cycles of poverty.
+								Guided by its vision—&apos;A world where all children and youth
+								can learn free of cost, lead, and grow without fear to reach
+								their full potential&apos;—KISS stands as a model of sustainable
+								social development, transforming lives and breaking
+								intergenerational cycles of poverty.
 							</p>
 
 							<div className="flex flex-col gap-8">

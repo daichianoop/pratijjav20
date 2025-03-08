@@ -1,9 +1,11 @@
 /** @format */
 
-section{
+/* Section background */
+section {
 	background-color: #ebce89;
-	
 }
+
+/* Flip Card Container */
 .flip-card {
 	background-color: #ebce89;
 	margin: 0;
@@ -14,12 +16,13 @@ section{
 	perspective: 1000px; /* Creates 3D effect */
 }
 
-/* Responsive text alignment */
+/* Title styling */
 .title {
 	font-weight: 900;
 	text-align: center;
 }
 
+/* Inner flip structure */
 .flip-card-inner {
 	position: relative;
 	width: 100%;
@@ -29,13 +32,21 @@ section{
 	transform-style: preserve-3d;
 }
 
-/* Flip only on larger screens */
+/* Flip on hover for larger screens */
 @media (hover: hover) {
 	.flip-card:hover .flip-card-inner {
 		transform: rotateY(180deg);
 	}
 }
 
+/* Flip on click for mobile */
+@media (max-width: 768px) {
+	.flip-card.flipped .flip-card-inner {
+		transform: rotateY(180deg);
+	}
+}
+
+/* Card Faces */
 .flip-card-front,
 .flip-card-back {
 	box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
@@ -50,20 +61,19 @@ section{
 	border-radius: 25px;
 }
 
-/* Front card styles */
+/* Front Card Styling */
 .flip-card-front {
 	color: #ebce89;
 	background-color: #333; /* Darker background for contrast */
 }
 
-/* Back card styles */
+/* Back Card Styling */
 .flip-card-back {
 	color: #ebce89;
 	transform: rotateY(180deg);
-	/* Gradient for better contrast */
 }
 
-/* Mobile adjustments */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
 	.flip-card {
 		height: 400px; /* Reduce height for smaller screens */

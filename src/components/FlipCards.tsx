@@ -1,6 +1,6 @@
 /** @format */
-
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import "./styles/flipCards.css";
 import Image from "next/image";
 import { Yeseva_One } from "next/font/google";
@@ -11,10 +11,23 @@ const yeseva = Yeseva_One({
 });
 
 const FlipCard: React.FC = () => {
+	// State to track flipped status for each card
+	const [flippedCards, setFlippedCards] = useState<boolean[]>([
+		false,
+		false,
+		false,
+	]);
+
+	const handleFlip = (index: number) => {
+		setFlippedCards((prev) => {
+			const updatedFlippedCards = [...prev];
+			updatedFlippedCards[index] = !updatedFlippedCards[index];
+			return updatedFlippedCards;
+		});
+	};
+
 	return (
-		<section
-			className="flipCards md:px-12 sm:px-10 mx-3 "
-			style={{ backgroundColor: "#EBCE89 ", margin: "0px" }}>
+		<section className="flipCards w-screen ">
 			<div className="flex flex-col md:flex-row flex-wrap justify-center gap-10 md:gap-8 sm:gap-20">
 				{[
 					{
@@ -38,9 +51,12 @@ const FlipCard: React.FC = () => {
 				].map((card, index) => (
 					<div
 						key={index}
-						className="flip-card w-full sm:w-[340px] md:w-[360px] lg:w-[390px]">
-						<div className="flip-card-inner">
-							<div className="flip-card-front bg-[url('/flipcardbg.png')] bg-cover bg-center">
+						className={`flip-card w-full sm:w-[340px] md:w-[360px] lg:w-[390px] ${
+							flippedCards[index] ? "flipped" : ""
+						}`}
+						onClick={() => handleFlip(index)}>
+						<div className="flip-card-inner ">
+							<div className="flip-card-front bg-[url('/flipcardbg.png')] bg-cover bg-center m-2">
 								<Image
 									src={card.src}
 									width={390}
@@ -53,7 +69,7 @@ const FlipCard: React.FC = () => {
 									className={`title1234 mb-4 text-3xl md:text-2xl ${yeseva.className}`}>
 									{card.title}
 								</p>
-								<p className={`text-base  ${yeseva.className}`}>
+								<p className={`text-base ${yeseva.className}`}>
 									{card.description}
 								</p>
 							</div>

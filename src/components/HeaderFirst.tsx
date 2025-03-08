@@ -6,11 +6,11 @@ import CountdownTimer from "@/components/CountDownTimer";
 const HeaderFirstPage: React.FC = () => {
 	return (
 		<div className="fakebody min-h-screen bg-no-repeat bg-fixed bg-contain pt-7">
-			<div className="text-4xl lg:text-6xl text-center  mt-1 font-built-titling font-extrabold">
+			<div className="text-5xl text-center  mt-1 font-built-titling font-extrabold">
 				20<sup>TH</sup> EDITION
 			</div>
-			<div className="text-5xl text-center font-built-tilting font-bold mt-5">
-				OF ONE OF <br /> THE LARGEST ASIAN PARLIAMENTARY DEBATE <br />
+			<div className="text-3xl text-center font-built-tilting font-bold mt-5 p-2">
+				OF ONE OF <br /> THE LARGEST <br />  ASIAN PARLIAMENTARY DEBATE <br />
 				IN INDIA
 			</div>
 			<div className="flex justify-center">

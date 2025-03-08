@@ -16,8 +16,8 @@ const HeaderFirstPage: React.FC = () => {
 			<div className="flex justify-center">
 				<CountdownTimer />
 			</div>
-<div className="text-4xl text-center font-built-tilting mt-5 font-medium ">
-                Think Fast, Speak Smart, Win Big –  ₹77K Awaits!
+<div className="text-4xl text-center font-built-tilting mt-5 font-semibold ">
+                Battle for Glory & 77K in Prizes - March 21-23,2025 !
             </div>
 		</div>
 	);

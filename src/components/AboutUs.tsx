@@ -124,7 +124,7 @@ const AboutUs = () => {
 									KIIT
 								</h3>
 							</div>
-							<p className="gradient-text text-gray-300 mb-8 p-5 leading-relaxed text-[22px]">
+							<p className="gradient-text text-gray-300 mb-8 p-5 leading-relaxed text-[21px] text-left font-bold">
 								Kalinga Institute of Industrial Technology (KIIT) Deemed to be
 								University is a globally recognized institution known for
 								academic excellence, innovation, and humanitarian values.
@@ -165,7 +165,7 @@ const AboutUs = () => {
 									KISS
 								</h3>
 							</div>
-							<p className="gradient-text text-gray-300 mb-8 leading-relaxed text-base text-[19px] font-medium">
+							<p className="gradient-text text-gray-300 mb-8 leading-relaxed text-base text-[20px] font-bold text-right">
 								The Kalinga Institute of Social Sciences(KISS), The Kalinga
 								Institute of Social Sciences (KISS), founded in 1992 by Dr.
 								Achyuta Samanta, provides free education from kindergarten to

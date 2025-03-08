@@ -92,7 +92,7 @@ export const AnimatedTestimonials = ({
 			className="antialiased font-sans px-10 md:px-12 lg:px-20 py-20"
 			style={{ backgroundColor: "#EBCE89" }}>
 			<div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
-				<div className="flex flex-col justify-center py-4">
+				<div className="flex flex-col justify-center items-center py-4">
 					<motion.div
 						key={active}
 						initial={{ y: 20, opacity: 0 }}

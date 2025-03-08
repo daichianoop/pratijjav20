@@ -8,7 +8,7 @@ export default function Home() {
 	return (
 		<>
 			<div className={"font-built-titling"}>
-				<div className="fakebody w-full h-screen text-[#ebce89]">
+				<div className="fakebody w-screen h-screen text-[#ebce89] px-1.5">
 					<HeaderFirstPage />
 				</div>
 				<AnimatedTestimonialsDemo />

@@ -1,23 +1,24 @@
+/** @format */
+
 import React from "react";
 import CountdownTimer from "@/components/CountDownTimer";
 
 const HeaderFirstPage: React.FC = () => {
 	return (
 		<div className="fakebody min-h-screen bg-no-repeat bg-fixed bg-contain pt-7">
-			<div className="text-4xl lg:text-6xl text-center built-tilting mt-1 text-white" style={{ fontFamily: "Impact, sans-serif" }}>
-				20<sup>th</sup> EDITION
+			<div className="text-4xl lg:text-6xl text-center  mt-1 font-built-titling font-extrabold">
+				20<sup>TH</sup> EDITION
 			</div>
-			<div className="text-4xl lg:text-6xl text-center built-tilting mt-5 text-white" style={{ fontFamily: "Impact, sans-serif" }}>
-				OF THE LARGEST ASIAN PARLIAMENTARY DEBATE <br /> IN INDIA
+			<div className="text-5xl text-center font-built-tilting font-bold mt-5">
+				OF ONE OF <br /> THE LARGEST ASIAN PARLIAMENTARY DEBATE <br />
+				IN INDIA
 			</div>
-			<div className="flex justify-center mt-5">
+			<div className="flex justify-center">
 				<CountdownTimer />
 			</div>
-			<div className="text-2xl lg:text-4xl text-center built-tilting mt-5 text-white">
-                Think Fast, Speak Smart, Win Big – <br /> ₹77K Awaits!
+<div className="text-4xl text-center font-built-tilting mt-5 font-medium ">
+                Think Fast, Speak Smart, Win Big –  ₹77K Awaits!
             </div>
-
-
 		</div>
 	);
 };

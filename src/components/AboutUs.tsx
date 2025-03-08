@@ -20,9 +20,7 @@ const AboutUs = () => {
 			<div className="bg-[#002027]">
 				<section className=" bg-[#EBCE89] ">
 					{/* Gradient Overlay */}
-					<div
-						className=""
-						style={{ backgroundColor: "#EBCE89" }}></div>
+					<div className="" style={{ backgroundColor: "#EBCE89" }}></div>
 
 					<div className="relative container mx-auto py-16 px-4 text-center">
 						<h1
@@ -90,7 +88,7 @@ const AboutUs = () => {
 						</div>
 						<div className="flex justify-center">
 							<Image
-								src="https://ik.imagekit.io/chaitanya/IMG_2477.png?updatedAt=1740070800225"
+								src="https://ik.imagekit.io/chaitanya/3a6b8f45-aa99-476a-a72c-6c003a1cdd99.jpeg"
 								alt="Debate"
 								className="rounded-lg"
 								width={800}
@@ -126,33 +124,64 @@ const AboutUs = () => {
 									KIIT
 								</h3>
 							</div>
-							<p className="gradient-text text-gray-300 mb-8 leading-relaxed text-base sm:text-[18px]">
-								Kalinga Institute of Industrial Technology (KIIT) Deemed to be University is a globally recognized institution known for academic excellence, innovation, and humanitarian values. Founded in 1992-93 by Dr. Achyuta Samanta with just Rs. 5000, KIIT has grown from an Industrial Training Institute into a prestigious university within 25 years. Today, it offers a diverse range of programs across Engineering, Management, Law, Medical Sciences, Biotechnology, Mass Communication, and more, educating 40,000 students, including 2,000 international students from 65 countries.
-Spanning 36 sq. km with 25 green campuses, KIIT boasts world-class facilities, including a 2,600-bed super-specialty hospital (KIMS), a 22-storey research and innovation center, international-standard sports complexes, a central research facility, and a multi-storey library. It has a strong placement record and an alumni network of over one lakh professionals.
-KIIT is accredited by ABET (USA) and IET (UK) and holds an A++ grade from NAAC. It ranks within the 601-800 bracket in the Times Higher Education World University Ranking 2024, with its Computer Science Engineering program in the global 301-400 range. Recognized as India’s top private university for innovation by AICTE, KIIT continues to excel in research, academics, and industry engagement.
+							<p className="gradient-text text-gray-300 mb-8 p-5 leading-relaxed text-[22px]">
+								Kalinga Institute of Industrial Technology (KIIT) Deemed to be
+								University is a globally recognized institution known for
+								academic excellence, innovation, and humanitarian values.
+								Founded in 1992-93 by Dr. Achyuta Samanta with just Rs. 5000,
+								KIIT has grown from an Industrial Training Institute into a
+								prestigious university within 25 years. Today, it offers a
+								diverse range of programs across Engineering, Management, Law,
+								Medical Sciences, Biotechnology, Mass Communication, and more,
+								educating 40,000 students, including 2,000 international
+								students from 65 countries. Spanning 36 sq. km with 25 green
+								campuses, KIIT boasts world-class facilities, including a
+								2,600-bed super-specialty hospital (KIMS), a 22-storey research
+								and innovation center, international-standard sports complexes,
+								a central research facility, and a multi-storey library. It has
+								a strong placement record and an alumni network of over one lakh
+								professionals. KIIT is accredited by ABET (USA) and IET (UK) and
+								holds an A++ grade from NAAC. It ranks within the 601-800
+								bracket in the Times Higher Education World University Ranking
+								2024, with its Computer Science Engineering program in the
+								global 301-400 range. Recognized as India's top private
+								university for innovation by AICTE, KIIT continues to excel in
+								research, academics, and industry engagement.
 							</p>
 						</div>
 
 						{/* KISS Section */}
 						<div>
 							<div className="flex items-center gap-4 mb-6">
-							<Image
-                                src="https://ik.imagekit.io/chaitanya/images%20(22).png"
-                                alt="KISS icon"
-                                width={40}
-							    height={32}
-                                className="w-10 h-10 object-contain"
-                                />
+								<Image
+									src="/kisslogo.png"
+									alt="KISS icon"
+									width={40}
+									height={32}
+									className="w-10 h-10 object-contain"
+								/>
 
 								<h3 className="text-amber-100 text-xl sm:text-3xl font-bold">
 									KISS
 								</h3>
 							</div>
-							<p className="gradient-text text-gray-300 mb-8 leading-relaxed text-base sm:text-[18px]">
-								The Kalinga Institute of Social Sciences(KISS), 
-The Kalinga Institute of Social Sciences (KISS), founded in 1992 by Dr. Achyuta Samanta, provides free education from kindergarten to post-graduation for children from tribal backgrounds. Committed to holistic development, KISS blends modern education with cultural preservation, empowering students to become impactful individuals.
-Beyond academics, KISS offers accommodation, meals, healthcare, and technological education, breaking socioeconomic barriers and preparing students for the future. With a growing alumni network making strides in public sectors, the institute continues to uplift marginalized communities through education.
-Guided by its vision—"A world where all children and youth can learn free of cost, lead, and grow without fear to reach their full potential"—KISS stands as a model of sustainable social development, transforming lives and breaking intergenerational cycles of poverty.
+							<p className="gradient-text text-gray-300 mb-8 leading-relaxed text-base text-[19px] font-medium">
+								The Kalinga Institute of Social Sciences(KISS), The Kalinga
+								Institute of Social Sciences (KISS), founded in 1992 by Dr.
+								Achyuta Samanta, provides free education from kindergarten to
+								post-graduation for children from tribal backgrounds. Committed
+								to holistic development, KISS blends modern education with
+								cultural preservation, empowering students to become impactful
+								individuals. Beyond academics, KISS offers accommodation, meals,
+								healthcare, and technological education, breaking socioeconomic
+								barriers and preparing students for the future. With a growing
+								alumni network making strides in public sectors, the institute
+								continues to uplift marginalized communities through education.
+								Guided by its vision—"A world where all children and youth can
+								learn free of cost, lead, and grow without fear to reach their
+								full potential"—KISS stands as a model of sustainable social
+								development, transforming lives and breaking intergenerational
+								cycles of poverty.
 							</p>
 
 							<div className="flex flex-col gap-8">
@@ -217,7 +246,7 @@ Guided by its vision—"A world where all children and youth can learn free of c
 				{/* Founder Section */}
 				<section className="container mx-auto px-4 py-16 bg-[#002027]">
 					<h2
-						className="text-[8vw] md:text-[50px] text-center w-full md:w-1/2 mx-auto font-bold mb-8 bg-gradient-to-r from-[#7F654A] via-[#EBCE89] to-[#7F654A] bg-clip-text text-transparent"
+						className="text-5xl md:text-[50px] text-center w-full mx-auto font-bold mb-8 bg-gradient-to-r from-[#7F654A] via-[#EBCE89] to-[#7F654A] bg-clip-text text-transparent"
 						style={{ fontFamily: "Impact, sans-serif" }}>
 						ABOUT FOUNDER OF KIIT AND KISS
 					</h2>
@@ -234,15 +263,26 @@ Guided by its vision—"A world where all children and youth can learn free of c
 						</div>
 						<div className="text-gray-300 space-y-4 leading-relaxed text-base sm:text-[18px]">
 							<p className="gradient-text">
-							Dr. Achyuta Samanta is the esteemed founder of the Kalinga Institute of Industrial Technology (KIIT) and the Kalinga Institute of Social Sciences (KISS). Committed to excellence and equal opportunities, he has dedicated his life to transforming lives through education and social service.
-
+								Dr. Achyuta Samanta is the esteemed founder of the Kalinga
+								Institute of Industrial Technology (KIIT) and the Kalinga
+								Institute of Social Sciences (KISS). Committed to excellence and
+								equal opportunities, he has dedicated his life to transforming
+								lives through education and social service.
 							</p>
 							<p className="gradient-text">
-							Rising from poverty, Dr. Samanta has become a beacon of hope, uplifting underprivileged communities through initiatives in education, healthcare, rural development, sports, and tribal empowerment. His contributions extend to art, literature, media, and spiritualism, making a lasting impact on society.
-
+								Rising from poverty, Dr. Samanta has become a beacon of hope,
+								uplifting underprivileged communities through initiatives in
+								education, healthcare, rural development, sports, and tribal
+								empowerment. His contributions extend to art, literature, media,
+								and spiritualism, making a lasting impact on society.
 							</p>
 							<p className="gradient-text">
-								Recognized globally, Dr. Samanta has received 64 honorary doctorates and numerous awards, including the ISA Award for Service to Humanity (Bahrain) and the ‘Best Worker’ Award (Mongolia). He has also served as a Member of Parliament (2019-2024) and continues to inspire change, leaving an enduring legacy of empowerment and progress.
+								Recognized globally, Dr. Samanta has received 64 honorary
+								doctorates and numerous awards, including the ISA Award for
+								Service to Humanity (Bahrain) and the &quot;Best Worker&quot;
+								Award (Mongolia). He has also served as a Member of Parliament
+								(2019-2024) and continues to inspire change, leaving an enduring
+								legacy of empowerment and progress.
 							</p>
 						</div>
 					</div>

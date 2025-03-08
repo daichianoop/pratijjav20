@@ -33,10 +33,10 @@ const Footer: React.FC = () => {
 
 			<div className="footer-container">
 				{/* Phone Numbers Section */}
-				<div className="footer-section text-center">
+				<div className="footer-section text-left">
 					<h3 className="uppercase">Phone Numbers</h3>
-					<p>Parth Sachdeva: +91 98765 43210</p>
-					<p>Aadit Baxi: +91 87654 32109</p>
+					<p>Parth Sachdeva: +91 7054400833</p>
+					<p>Aadit Baxi: +91 8588905179</p>
 				</div>
 
 				{/* Address Section */}

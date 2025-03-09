@@ -10,14 +10,14 @@ const HeaderFirstPage: React.FC = () => {
 				20<sup>TH</sup> EDITION
 			</div>
 			<div className="text-3xl text-center font-built-tilting font-bold mt-5 p-2">
-				OF ONE OF <br /> THE LARGEST <br />  ASIAN PARLIAMENTARY DEBATE <br />
+				ONE OF <br /> THE LARGEST <br />  ASIAN PARLIAMENTARY DEBATE <br />
 				IN INDIA
 			</div>
 			<div className="flex justify-center">
 				<CountdownTimer />
 			</div>
 <div className="text-4xl text-center font-built-tilting mt-5 font-semibold ">
-                Battle for Glory & 77K in Prizes - March 21-23,2025 !
+                Battle for Glory & 77K in Prizes !
             </div>
 		</div>
 	);

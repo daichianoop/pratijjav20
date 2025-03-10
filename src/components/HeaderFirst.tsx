@@ -19,6 +19,9 @@ const HeaderFirstPage: React.FC = () => {
 <div className="text-4xl text-center font-built-tilting mt-5 font-semibold ">
                 Battle for Glory & 77K in Prizes !
             </div>
+			<div className="text-4xl text-center font-built-tilting mt-5 font-semibold ">
+                21-23 March 2025
+            </div>
 		</div>
 	);
 };

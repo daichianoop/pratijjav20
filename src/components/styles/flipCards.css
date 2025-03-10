@@ -75,8 +75,12 @@ section {
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
+	
 	.flip-card {
 		height: 400px; /* Reduce height for smaller screens */
+		margin-top: 50px;
+		margin-left: 15px;
+		
 	}
 
 	.flip-card-inner {

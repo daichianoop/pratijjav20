@@ -15,7 +15,7 @@ body {
 }
 
 .gradient-text {
-	@apply bg-gradient-to-r from-[#7F654A] via-[#EBCE89] to-[#7F654A] bg-clip-text text-transparent;
+	@apply bg-gradient-to-r from-[rgb(127,101,74)] via-[#EBCE89] to-[#7F654A] bg-clip-text text-transparent;
 }
 
 .overflow-scroll::-webkit-scrollbar {

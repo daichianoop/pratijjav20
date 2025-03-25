@@ -1,10 +1,17 @@
+"use client"
 import Link from "next/link";
 import React from "react";
+import { usePathname } from "next/navigation";
 import "./styles/footer.css";
 import { GrMail } from "react-icons/gr"; // Mail icon
 import { FaFacebook, FaInstagram } from "react-icons/fa"; // Social media icons
 
 const Footer: React.FC = () => {
+	const pathname = usePathname();
+
+	// Disable footer on "/" filepath
+	if (pathname === "/") return null;
+
 	return (
 		<div id="contact" className="footer text-[#2e1413] font-built-titling font-bold">
 			<div className="footer-bottom">
@@ -48,7 +55,7 @@ const Footer: React.FC = () => {
 					<p>PINCODE - 751024</p>
 				</div>
 
-				{/* ✅ Updated Social Media Section - Aligned Properly */}
+				{/* Social Media Section */}
 				<div className="footer-section text-center">
 					<h3 className="uppercase font-bold underline">SOCIAL MEDIA</h3>
 					<div className="flex flex-col items-start justify-center space-y-3 mt-2">
@@ -91,7 +98,7 @@ const Footer: React.FC = () => {
 					<h3 className="uppercase">Quick Links</h3>
 					<ul>
 						<li><Link href="/about">About Us</Link></li>
-						<li><Link href="/">Home</Link></li>
+						<li><Link href="/home">Home</Link></li>
 					</ul>
 				</div>
 			</div>

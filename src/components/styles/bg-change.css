@@ -1,0 +1,36 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: bg-img 20s infinite;
+    backdrop-filter: blur(3px);
+    position: relative;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    pointer-events: none;
+}
+
+@keyframes bg-img {
+    0% {
+        background-image: url(/1.png);
+    }
+    25% {
+        background-image: url(/2.png);
+    }
+    50% {
+        background-image: url(/3.png);
+    }
+    75% {
+        background-image: url(/4.png);
+    }
+    100% {
+        background-image: url(/1.png);
+    }
+}
